@@ -56,41 +56,32 @@
                     <span>Blog</span></a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link" href="{{base_url('admin/aboutwhy/whysus')}}">
+                <a class="nav-link" href="{{base_url('admin/news')}}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>News</span></a>
             </li>
             <hr class="sidebar-divider">
             <div class="sidebar-heading">
-                Home
+                UTILITIES AND FINANCIAL SERVICES
             </div>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-home"></i>
-                    <span>Home</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Home Components:</h6>
-                        <a class="collapse-item" href="{{base_url('admin/homecomponent/intro')}}">Intro</a>
-                        <a class="collapse-item" href="{{base_url('admin/homecomponent/services')}}">Services</a>
-                    </div>
-                </div>
+            <li class="nav-item ">
+                <a class="nav-link" href="{{base_url('admin/utilities')}}">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Utilities</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Utilities</span>
-                </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
-                    </div>
-                </div>
+            <li class="nav-item ">
+                <a class="nav-link" href="{{base_url('admin/financialservices')}}">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Financial Services</span></a>
+            </li>
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">
+                CONTACT
+            </div>
+            <li class="nav-item ">
+                <a class="nav-link" href="{{base_url('admin/contact')}}">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Contact</span></a>
             </li>
             <hr class="sidebar-divider d-none d-md-block">
             <div class="text-center d-none d-md-inline">

@@ -2,7 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Blog extends CI_Controller
+class News extends CI_Controller
 {
 
     public function __construct()
@@ -11,19 +11,19 @@ class Blog extends CI_Controller
         if ($this->session->userdata('login') == false) {
             redirect('login');
         }
-        $this->load->model('Blog_model');
+        $this->load->model('News_model');
     }
 
     public function index()
     {
-        $data['blogs'] = $this->Blog_model->blogVeriAlModel();
-        $this->theme->display('backend/blog', $data);
+        $data['blogs'] = $this->News_model->newsVeriAlModel();
+        $this->theme->display('backend/news', $data);
     }
 
-    public function blogEkle()
+    public function newsEkle()
     {
         if ($this->input->post('form_post')) {
-            $this->load->helper('blog');
+            $this->load->helper('news');
             $this->load->library('form_validation');
             $data = $this->input->post();
             $data['slug'] = safeUrl($data['baslik']);
@@ -32,7 +32,7 @@ class Blog extends CI_Controller
             $this->form_validation->set_rules('icerik', 'content', 'required|min_length[5]');
             $this->form_validation->set_rules('slug', 'title', 'required|is_unique[blog.slug]');
             if ($this->form_validation->run()) {
-                $image_upload = blogImageUpload('image');
+                $image_upload = newsImageUpload('image');
                 if ($image_upload->result == 1) {
                     $blog_data = array(
                         'baslik' => $data['baslik'],
@@ -40,9 +40,9 @@ class Blog extends CI_Controller
                         'slug' => $data['slug'],
                         'resim_yol' => $image_upload->fileName,
                     );
-                    $addBlog = $this->Blog_model->blogEkleModel($blog_data);
+                    $addBlog = $this->News_model->newsEkleModel($blog_data);
                     if ($addBlog) {
-                        $sonuc['result'] = 'Blog added successfully.';
+                        $sonuc['result'] = 'News added successfully.';
                     } else {
                         $sonuc['hata'] = 'There was a problem, please try again.';
                     }
@@ -59,10 +59,10 @@ class Blog extends CI_Controller
         echo json_encode($sonuc);
     }
 
-    public function blogDuzenle()
+    public function newsDuzenle()
     {
         if ($this->input->post('form_post')) {
-            $this->load->helper('blog');
+            $this->load->helper('news');
             $this->load->library('form_validation');
             $data = $this->input->post();
             $baslik = safeUrl($data['baslik']);
@@ -83,13 +83,12 @@ class Blog extends CI_Controller
                     $blog_data['slug'] = $data['slug'];
                 }
                 if (!empty($_FILES['image']['name'])) {
-                    $image_upload = blogImageUpload('image');
+                    $image_upload = newsImageUpload('image');
                     if ($image_upload->result == 1) {
                         $blog_data['resim_yol'] = $image_upload->fileName;
-                        error_log(print_r($blog_data, TRUE));
-                        $updateBlog = $this->Blog_model->blogGuncelleModel($data['duzenlemeID'], $blog_data);
+                        $updateBlog = $this->News_model->newsGuncelleModel($data['duzenlemeID'], $blog_data);
                         if ($updateBlog) {
-                            $sonuc['result'] = 'Blog updated successfully.';
+                            $sonuc['result'] = 'News updated successfully.';
                         } else {
                             $sonuc['hata'] = 'There was a problem, please try again.';
                         }
@@ -97,10 +96,9 @@ class Blog extends CI_Controller
                         $sonuc['hata'] = $image_upload->hata;
                     }
                 } else {
-                    error_log(print_r($blog_data, TRUE));
-                    $updateBlog = $this->Blog_model->blogGuncelleModel($data['duzenlemeID'], $blog_data);
+                    $updateBlog = $this->News_model->newsGuncelleModel($data['duzenlemeID'], $blog_data);
                     if ($updateBlog) {
-                        $sonuc['result'] = 'Blog updated successfully.';
+                        $sonuc['result'] = 'News updated successfully.';
                     } else {
                         $sonuc['hata'] = 'There was a problem, please try again.';
                     }
@@ -115,19 +113,19 @@ class Blog extends CI_Controller
         echo json_encode($sonuc);
     }
 
-    public function blogBul($id)
+    public function newsBul($id)
     {
-        $findBlog = $this->Blog_model->blogbulModel($id);
+        $findBlog = $this->News_model->newsbulModel($id);
         $findBlog->icerik = htmlspecialchars_decode($findBlog->icerik);
         $sonuc['result'] = $findBlog;
         echo json_encode($sonuc);
     }
 
-    public function blogSil($id)
+    public function newsSil($id)
     {
-        $findBlog = $this->Blog_model->blogSilModel($id);
+        $findBlog = $this->News_model->newsSilModel($id);
         if ($findBlog) {
-            $sonuc['result'] = 'Blog deleted successfully!';
+            $sonuc['result'] = 'News deleted successfully!';
         } else {
             $sonuc['hata'] = 'There was a problem, please try again.';
         }
