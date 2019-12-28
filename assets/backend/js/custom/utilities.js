@@ -39,7 +39,7 @@ $(document).ready(function () {
             if (e) {
                 $.ajax({
                     type: "Post",
-                    url: SITE_URL + "/admin/blog/blogSil/" + ID,
+                    url: SITE_URL + "/admin/utilities/utilitieSil/" + ID,
                     cache: false,
                     dataType: "json",
                     data: {},
@@ -59,7 +59,7 @@ $(document).ready(function () {
                     }
                 });
             } else {
-                alertify.error("Silmekten vazgeçtiniz .");
+                alertify.error("Canceled");
             }
         });
     });
@@ -72,7 +72,7 @@ $(document).ready(function () {
         if (duzenleme == 0) {//ekleme
             $.ajax({
                 type: "POST",
-                url: SITE_URL + "admin/blog/blogEkle",
+                url: SITE_URL + "admin/utilities/utilitiesEkle",
                 cache: false,
                 dataType: "json",
                 data: new FormData(this),
@@ -101,7 +101,7 @@ $(document).ready(function () {
 
             $.ajax({
                 type: "POST",
-                url: SITE_URL + "admin/blog/blogDuzenle",
+                url: SITE_URL + "admin/utilities/utilitiesDuzenle",
                 cache: false,
                 dataType: "json",
                 data: new FormData(this),
@@ -134,7 +134,7 @@ $(document).ready(function () {
         var ID = $(this).parent().parent().attr('id');
         $.ajax({
             type: "post",
-            url: SITE_URL + "admin/blog/blogBul/" + ID,
+            url: SITE_URL + "admin/utilities/utilitiesBul/" + ID,
             dataType: "json",
             cache: false,
             data: {},
@@ -150,7 +150,7 @@ $(document).ready(function () {
                         CKEDITOR.instances['blog_icerik'].setData(cevap.result.icerik);
                         $("input[name=duzenleme]").val(1);
                         $("#image-holder").empty();
-                        $("#image-holder").prepend('<img id="theImg" src="' + SITE_URL + 'uploads/blog/' + cevap.result.resim_yol + '" class="thumb-image img-responsive"/>');
+                        $("#image-holder").prepend('<img id="theImg" src="' + SITE_URL + 'uploads/utilities/' + cevap.result.resim_yol + '" class="thumb-image img-responsive"/>');
                         $("input[name=duzenlemeID]").val(ID);
                         var kapaliacik = $("input[name=kapaliacik]").val();
                         if (kapaliacik == 0) {

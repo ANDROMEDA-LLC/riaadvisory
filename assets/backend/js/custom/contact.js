@@ -39,7 +39,7 @@ $(document).ready(function () {
             if (e) {
                 $.ajax({
                     type: "Post",
-                    url: SITE_URL + "/admin/blog/blogSil/" + ID,
+                    url: SITE_URL + "/admin/contact/contactSil/" + ID,
                     cache: false,
                     dataType: "json",
                     data: {},
@@ -64,77 +64,13 @@ $(document).ready(function () {
         });
     });
     //buton kaydet
-    $('#form').submit(function (e) {
-        e.preventDefault();
-        //loadGizle();
-        CKEDITOR.instances['blog_icerik'].updateElement();
-        var duzenleme = $("input[name=duzenleme]").val();
-        if (duzenleme == 0) {//ekleme
-            $.ajax({
-                type: "POST",
-                url: SITE_URL + "admin/blog/blogEkle",
-                cache: false,
-                dataType: "json",
-                data: new FormData(this),
-                async: false,
-                contentType: false,
-                enctype: 'multipart/form-data',
-                processData: false,
-                success: function (cevap) {
-                    if (cevap.hata) {
-                        //loadGoster();
-                        alertify.alert('ERROR', cevap.hata);
-                        return false;
-                    } else {
-                        if (cevap.result) {
-                            loadGoster();
-                            alertify.alert('SUCCESS', cevap.result, function () {
-                                setTimeout(function () {
-                                    window.location.reload(1);
-                                }, 1000);
-                            });
-                        }
-                    }
-                }
-            });
-        } else {//düzenleme
-
-            $.ajax({
-                type: "POST",
-                url: SITE_URL + "admin/blog/blogDuzenle",
-                cache: false,
-                dataType: "json",
-                data: new FormData(this),
-                async: false,
-                contentType: false,
-                enctype: 'multipart/form-data',
-                processData: false,
-                success: function (cevap) {
-                    if (cevap.hata) {
-                        //loadGoster();
-                        alertify.alert('ERROR', cevap.hata);
-                        return false;
-                    } else {
-                        if (cevap.result) {
-                            loadGoster();
-                            alertify.alert('SUCCESS', cevap.result, function () {
-                                setTimeout(function () {
-                                    window.location.reload(1);
-                                }, 1000);
-                            });
-
-                        }
-                    }
-                }
-            });
-        }
-    });
+    
     //table düzenle butonları
     $(document).on('click', 'button#duzenle', function (e) {
         var ID = $(this).parent().parent().attr('id');
         $.ajax({
             type: "post",
-            url: SITE_URL + "admin/blog/blogBul/" + ID,
+            url: SITE_URL + "admin/contact/contactBul/" + ID,
             dataType: "json",
             cache: false,
             data: {},
@@ -145,13 +81,11 @@ $(document).ready(function () {
                     return false;
                 } else {
                     if (cevap.result) {
-                        $("input[name=eskiBaslik]").val(cevap.result.baslik);
-                        $("input[name=baslik]").val(cevap.result.baslik);
-                        CKEDITOR.instances['blog_icerik'].setData(cevap.result.icerik);
-                        $("input[name=duzenleme]").val(1);
-                        $("#image-holder").empty();
-                        $("#image-holder").prepend('<img id="theImg" src="' + SITE_URL + 'uploads/blog/' + cevap.result.resim_yol + '" class="thumb-image img-responsive"/>');
-                        $("input[name=duzenlemeID]").val(ID);
+                       $("input[name=name]").val(cevap.result.name);
+                       $("input[name=email]").val(cevap.result.email);
+                       $("input[name=phone]").val(cevap.result.phone);
+                       $("textarea[name=icerik]").val(cevap.result.message);
+                       $("input[name=duzenlemeID]").val(ID);
                         var kapaliacik = $("input[name=kapaliacik]").val();
                         if (kapaliacik == 0) {
                             $("#formToggle").click();

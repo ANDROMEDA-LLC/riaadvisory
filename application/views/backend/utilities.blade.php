@@ -1,12 +1,12 @@
 @extends('backend/template')
-@section('title','Blog')
+@section('title','Utilities')
 @section('css')
 <link href="{{base_url('assets/backend')}}/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 @endsection
 @section('js')
 <script src="{{base_url('assets/backend')}}/vendor/datatables/jquery.dataTables.min.js"></script>
 <script src="{{base_url('assets/backend')}}/vendor/datatables/dataTables.bootstrap4.min.js"></script>
-<script src="{{base_url('assets/backend')}}/js/custom/blog.js" type="text/javascript"></script>
+<script src="{{base_url('assets/backend')}}/js/custom/utilities.js" type="text/javascript"></script>
 <script src="{{base_url('vendor/ckeditor/ckeditor')}}/ckeditor.js" type="text/javascript"></script>
 <script type="text/javascript">
     CKEDITOR.replace('blog_icerik', {
@@ -20,12 +20,12 @@
 @section('icerik')
 <section class="content-header">
     <h1>
-        Blog
+    Utilities
     </h1>
 </section>
 <div class="card shadow mb-4">
     <a href="#collapseCard" id='formToggle' class="d-block card-header py-3 collapsed" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCard">
-        <h6 class="m-0 font-weight-bold text-primary">Add Blog</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Add Utilities</h6>
     </a>
     <div class="collapse" id="collapseCard">
         <div class="card-body">
@@ -73,7 +73,7 @@
 </div>
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Blog Table</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Utilities Table</h6>
     </div>
     <div class="card-body">
         <div class="table-responsive">

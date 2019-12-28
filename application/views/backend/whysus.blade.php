@@ -1,5 +1,5 @@
 @extends('backend/template')
-@section('title','Blog')
+@section('title','Why Us')
 @section('css')
 <link href="{{base_url('assets/backend')}}/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 @endsection
