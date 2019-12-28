@@ -1,0 +1,12 @@
+.save_cancel_button input{
+    margin-left: 5px;
+}
+
+#image-holder{
+    height:200px;
+    width:100%;
+}
+
+#image-holder img{
+    width:auto;max-width:100%;height:auto;max-height:100%;
+}
