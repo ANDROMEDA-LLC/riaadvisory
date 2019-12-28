@@ -10,8 +10,6 @@ class Blog extends CI_Controller
         parent::__construct();
         if ($this->session->userdata('login') == false) {
             redirect('login');
-        } else if ($this->session->userdata('admin')->tip != 1) {
-            redirect('admin');
         }
         $this->load->model('Blog_model');
     }
@@ -41,13 +39,12 @@ class Blog extends CI_Controller
                         'icerik' => htmlspecialchars($data['icerik']),
                         'slug' => $data['slug'],
                         'resim_yol' => $image_upload->fileName,
-                        'tiklanma_sayisi' => 0,
                     );
                     $addBlog = $this->Blog_model->blogEkleModel($blog_data);
                     if ($addBlog) {
-                        $sonuc['result'] = 'Blog başarıyla eklendi .';
+                        $sonuc['result'] = 'Blog added successfully.';
                     } else {
-                        $sonuc['hata'] = 'Bir sorun oluştu tekrar deneyiniz.';
+                        $sonuc['hata'] = 'There was a problem, please try again.';
                     }
                 } else {
                     $sonuc['hata'] = $image_upload->hata;
@@ -57,7 +54,7 @@ class Blog extends CI_Controller
                 $sonuc['hata'] = array_values($error_array)[0];
             }
         } else {
-            $sonuc['hata'] = 'Bir sorun oluştu tekrar deneyiniz.';
+            $sonuc['hata'] = 'There was a problem, please try again.';
         }
         echo json_encode($sonuc);
     }
@@ -92,9 +89,9 @@ class Blog extends CI_Controller
                         error_log(print_r($blog_data, TRUE));
                         $updateBlog = $this->Blog_model->blogGuncelleModel($data['duzenlemeID'], $blog_data);
                         if ($updateBlog) {
-                            $sonuc['result'] = 'Blog başarıyla güncellendi .';
+                            $sonuc['result'] = 'Blog updated successfully.';
                         } else {
-                            $sonuc['hata'] = 'Bir sorun oluştu tekrar deneyiniz.';
+                            $sonuc['hata'] = 'There was a problem, please try again.';
                         }
                     } else {
                         $sonuc['hata'] = $image_upload->hata;
@@ -103,9 +100,9 @@ class Blog extends CI_Controller
                     error_log(print_r($blog_data, TRUE));
                     $updateBlog = $this->Blog_model->blogGuncelleModel($data['duzenlemeID'], $blog_data);
                     if ($updateBlog) {
-                        $sonuc['result'] = 'Blog başarıyla güncellendi .';
+                        $sonuc['result'] = 'Blog updated successfully.';
                     } else {
-                        $sonuc['hata'] = 'Bir sorun oluştu tekrar deneyiniz.';
+                        $sonuc['hata'] = 'There was a problem, please try again.';
                     }
                 }
             } else {
@@ -113,7 +110,7 @@ class Blog extends CI_Controller
                 $sonuc['hata'] = array_values($error_array)[0];
             }
         } else {
-            $sonuc['hata'] = 'Bir sorun oluştu tekrar deneyiniz.';
+            $sonuc['hata'] = 'There was a problem, please try again.';
         }
         echo json_encode($sonuc);
     }
@@ -130,9 +127,9 @@ class Blog extends CI_Controller
     {
         $findBlog = $this->Blog_model->blogSilModel($id);
         if ($findBlog) {
-            $sonuc['result'] = 'Blog başarıyla silindi !';
+            $sonuc['result'] = 'Blog deleted successfully!';
         } else {
-            $sonuc['hata'] = 'Bir sorun oluştu tekrar deneyiniz.';
+            $sonuc['hata'] = 'There was a problem, please try again.';
         }
         echo json_encode($sonuc);
     }

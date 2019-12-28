@@ -17,18 +17,16 @@ $(document).ready(function () {
             if (duzenleme == 0) {
                 $("input[name=duzenleme]").val(0);
                 $("input[name=duzenlemeID]").val(-1);
-                $("input[name=baslik]").val("");
-                CKEDITOR.instances['blog_icerik'].setData("");
-                $("#image-holder").empty();
-                $("#image-holder").prepend('<img id="theImg" src="' + SITE_URL + '/assets/backend/img/no-image.png' + '" class="thumb-image img-responsive" style="width:auto;max-width:100%;height:auto;max-height:100%;"/>');
+                $("input[name=title]").val("");
+                $("input[name=content]").val("");
                 $("input[name=eskiBaslik]").val("");
             }
         } else {
             $("input[name=duzenleme]").val(0);
             $("input[name=kapaliacik]").val(0);
             $("input[name=duzenlemeID]").val(-1);
-            $("input[name=baslik]").val("");
-            CKEDITOR.instances['blog_icerik'].setData("");
+            $("input[name=title]").val("");
+            $("input[name=content]").val("");
             $("input[name=eskiBaslik]").val("");
         }
     });
@@ -66,13 +64,12 @@ $(document).ready(function () {
     //buton kaydet
     $('#form').submit(function (e) {
         e.preventDefault();
-        //loadGizle();
-        CKEDITOR.instances['blog_icerik'].updateElement();
+        loadGizle();
         var duzenleme = $("input[name=duzenleme]").val();
         if (duzenleme == 0) {//ekleme
             $.ajax({
                 type: "POST",
-                url: SITE_URL + "admin/blog/blogEkle",
+                url: SITE_URL + "admin/homecomponent/servicesekle",
                 cache: false,
                 dataType: "json",
                 data: new FormData(this),
@@ -82,7 +79,7 @@ $(document).ready(function () {
                 processData: false,
                 success: function (cevap) {
                     if (cevap.hata) {
-                        //loadGoster();
+                        loadGoster();
                         alertify.alert('ERROR', cevap.hata);
                         return false;
                     } else {

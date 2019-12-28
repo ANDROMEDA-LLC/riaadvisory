@@ -14,7 +14,7 @@ $(document).ready(function () {
         CKEDITOR.instances['intro_content'].updateElement();
         $.ajax({
             type: "POST",
-            url: SITE_URL + "admin/homecomponent/introDuzenle",
+            url: SITE_URL + "admin/aboutwhy/aboutusduzenle",
             cache: false,
             dataType: "json",
             data: new FormData(this),

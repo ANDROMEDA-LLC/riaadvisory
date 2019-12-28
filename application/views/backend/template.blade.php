@@ -30,7 +30,35 @@
             <li class="nav-item active">
                 <a class="nav-link" href="{{base_url('admin')}}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>Home</span></a>
+            </li>
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">
+                About Us and Why Us
+            </div>
+            <li class="nav-item ">
+                <a class="nav-link" href="{{base_url('admin/aboutwhy/aboutus')}}">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>About Us</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="{{base_url('admin/aboutwhy/whysus')}}">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Why Us</span></a>
+            </li>
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">
+                Blog and News
+            </div>
+            <li class="nav-item ">
+                <a class="nav-link" href="{{base_url('admin/blog')}}">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Blog</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="{{base_url('admin/aboutwhy/whysus')}}">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>News</span></a>
             </li>
             <hr class="sidebar-divider">
             <div class="sidebar-heading">
