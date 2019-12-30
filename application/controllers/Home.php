@@ -72,10 +72,6 @@ class Home extends CI_Controller
     {
         $this->theme->display('frontend/contact');
     }
-    public function FAQ()
-    {
-        $this->theme->display('frontend/FAQ');
-    }
     public function partners()
     {
         $this->theme->display('frontend/partners');

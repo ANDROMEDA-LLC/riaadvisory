@@ -9,7 +9,8 @@ $route['(?i)admin'] = 'admin/admin';
 //home için
 $route['(?i)login'] = 'login/index';
 $route['workriadetail/(:any)'] = 'home/workriadetail/$1';
-$route['(?i)(:any)'] = 'home/$1'; 
+$route['(?i)(:any)'] = 'home/$1';
+
 
 
 //duyurular için 
