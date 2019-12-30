@@ -38,7 +38,7 @@
                                 <div class="entry-meta">
                                     <ul>
                                         <li><a>Admin</a></li>
-                                        <li>{{$item->create_date}}</li>
+                                        <li>@php echo date('m-d-Y', strtotime(str_replace('-', '/', $item->create_date))) @endphp</li>
                                     </ul>
                                 </div>
 

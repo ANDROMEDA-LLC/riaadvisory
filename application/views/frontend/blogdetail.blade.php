@@ -38,7 +38,7 @@
                             <div class="article-content">
                                 <div class="entry-meta">
                                     <ul>
-                                        <li><span>Posted On:</span> <a href="#">{{$blogdetail->create_date}}</a></li>
+                                        <li><span>Posted On:</span> <a href="#">@php echo date('m-d-Y', strtotime(str_replace('-', '/', $blogdetail->create_date))) @endphp</a></li>
                                         <li><span>Posted By:</span> <a href="#">Admin</a></li>
                                     </ul>
                                 </div>
@@ -263,7 +263,7 @@
                                         <span class="fullimage cover" role="img" ><img src="{{base_url('uploads/blog/').$item->resim_yol}}"/></span>
                                     </a>
                                     <div class="info">
-                                        <time datetime="2019-06-30">{{$item->create_date}}</time>
+                                        <time datetime="2019-06-30">@php echo date('m-d-Y', strtotime(str_replace('-', '/', $item->create_date))) @endphp</time>
                                         <h4 class="title usmall"><a href="{{base_url('blogdetail/').$item->slug}}">{{$item->baslik}}</a></h4>
                                     </div>
 

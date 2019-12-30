@@ -1,7 +1,7 @@
 @extends('frontend/template')
 @section('title','News')
 @section('icerik')
-<p style="display:none;" class="menuactive">Blog</p>
+<p style="display:none;" class="menuactive">Company</p>
         <!-- Start Page Title Area -->
         <div class="page-title-area">
             <div class="container">
@@ -37,12 +37,12 @@
                                 <div class="entry-meta">
                                     <ul>
                                         <li><a>Admin</a></li>
-                                        <li>{{$item->create_date}}</li>
+                                        <li>  @php echo date('m-d-Y', strtotime(str_replace('-', '/', $item->create_date))) @endphp </li>
                                     </ul>
                                 </div>
 
                                 <h3><a href="{{base_url('newsdetail/').$item->slug}}">{{$item->baslik}}</a></h3>
-                                <p>@php echo htmlspecialchars_decode($item->icerik) @endphp</p>
+                                <p>@php echo htmlspecialchars_decode(substr($item->icerik,0,150)) @endphp</p>
                                 <a href="{{base_url('newsdetail/').$item->slug}}" class="learn-more-btn">Read More <i class="flaticon-add-1"></i></a>
                             </div>
                         </div>
@@ -50,7 +50,7 @@
                     @endforeach
                     
 
-                    <div class="col-lg-12 col-md-12">
+                    <!-- <div class="col-lg-12 col-md-12">
                         <div class="pagination-area">
                             <a href="#" class="prev page-numbers"><i class="fas fa-angle-double-left"></i></a>
                             <a href="#" class="page-numbers">1</a>
@@ -59,7 +59,7 @@
                             <a href="#" class="page-numbers">4</a>
                             <a href="#" class="next page-numbers"><i class="fas fa-angle-double-right"></i></a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
