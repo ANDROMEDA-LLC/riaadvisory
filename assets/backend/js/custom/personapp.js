@@ -18,9 +18,6 @@ $(document).ready(function () {
                 $("input[name=duzenleme]").val(0);
                 $("input[name=duzenlemeID]").val(-1);
                 $("input[name=baslik]").val("");
-                CKEDITOR.instances['blog_icerik'].setData("");
-                $("#image-holder").empty();
-                $("#image-holder").prepend('<img id="theImg" src="' + SITE_URL + '/assets/backend/img/no-image.png' + '" class="thumb-image img-responsive" style="width:auto;max-width:100%;height:auto;max-height:100%;"/>');
                 $("input[name=eskiBaslik]").val("");
             }
         } else {
@@ -28,7 +25,6 @@ $(document).ready(function () {
             $("input[name=kapaliacik]").val(0);
             $("input[name=duzenlemeID]").val(-1);
             $("input[name=baslik]").val("");
-            CKEDITOR.instances['blog_icerik'].setData("");
             $("input[name=eskiBaslik]").val("");
         }
     });
@@ -70,7 +66,7 @@ $(document).ready(function () {
         var ID = $(this).parent().parent().attr('id');
         $.ajax({
             type: "post",
-            url: SITE_URL + "admin/contact/contactBul/" + ID,
+            url: SITE_URL + "admin/personapp/personappBul/" + ID,
             dataType: "json",
             cache: false,
             data: {},
@@ -84,8 +80,10 @@ $(document).ready(function () {
                        $("input[name=name]").val(cevap.result.name);
                        $("input[name=email]").val(cevap.result.email);
                        $("input[name=phone]").val(cevap.result.phone);
-                       $("input[name=company]").val(cevap.result.company);
+                       $("input[name=position]").val(cevap.result.position);
                        $("textarea[name=icerik]").val(cevap.result.message);
+                       $("#file_link").empty();
+                       $("#file_link").append('<a href ="'+SITE_URL+'uploads/workria/'+ cevap.result.file_link +'" target="_blank" class="btn btn-primary btn-icon-split"> <span class="icon text-white-50"><i class="fas fa-download"></i></span><span style="color: #fff;" class="text">Download</span></a>');
                        $("input[name=duzenlemeID]").val(ID);
                         var kapaliacik = $("input[name=kapaliacik]").val();
                         if (kapaliacik == 0) {
