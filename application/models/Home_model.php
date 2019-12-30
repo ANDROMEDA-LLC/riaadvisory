@@ -32,40 +32,42 @@ class Home_model extends CI_Model
     }
     function whyusDataModel()
     {
-        return $this->db->select('*') 
+        return $this->db->select('*')
             ->get('whysus')
             ->row(); // row() bir tane ve 1. sırada ki veri çeker , result() bütün veriyi döner . 
     }
     function introGetBlogModel()
     {
         return $this->db->select('*')
-            ->where('ID',1)
+            ->where('ID', 1)
             ->get('intro')
             ->row(); // row() bir tane ve 1. sırada ki veri çeker , result() bütün veriyi döner . 
     }
     function workRiaDataModel()
     {
         return $this->db->select('*')
-        ->order_by('create_date', 'DESC')
-        ->get('application')
-        ->result(); // row() bir tane ve 1. sırada ki veri çeker , result() bütün veriyi döner . 
+            ->order_by('create_date', 'DESC')
+            ->get('application')
+            ->result(); // row() bir tane ve 1. sırada ki veri çeker , result() bütün veriyi döner . 
 
     }
-    function workRiaDetailDataModel($kod){
+    function workRiaDetailDataModel($kod)
+    {
         return $this->db->select('*')
-        ->where('slug', $kod)
-        ->get('application')
-        ->row(); // row() bir tane ve en üste ki veri çeker result() bütün veriyi döner . 
+            ->where('slug', $kod)
+            ->get('application')
+            ->row(); // row() bir tane ve en üste ki veri çeker result() bütün veriyi döner . 
     }
     function blogDataModel()
     {
         return $this->db->select('*')
-        ->order_by('create_date', 'DESC')
-        ->get('blog')
-        ->result(); // row() bir tane ve 1. sırada ki veri çeker , result() bütün veriyi döner . 
+            ->order_by('create_date', 'DESC')
+            ->get('blog')
+            ->result(); // row() bir tane ve 1. sırada ki veri çeker , result() bütün veriyi döner . 
     }
-    function aboutusDataModel(){
-        return $this->db->select('*') 
+    function aboutusDataModel()
+    {
+        return $this->db->select('*')
             ->get('aboutus')
             ->row(); // row() bir tane ve 1. sırada ki veri çeker , result() bütün veriyi döner . 
     }
@@ -81,6 +83,12 @@ class Home_model extends CI_Model
     function contactEkleModel($data)
     {
         $this->db->insert('contact', $data);
+        return $this->db->insert_id();
+    }
+
+    function workriaEkleModel($data)
+    {
+        $this->db->insert('person_app', $data);
         return $this->db->insert_id();
     }
 }
