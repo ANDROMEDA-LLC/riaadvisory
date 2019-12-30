@@ -13,6 +13,7 @@
     <link href="{{base_url('assets/backend')}}/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="{{base_url('assets/backend')}}/css/style.css" rel="stylesheet">
     <link href="{{base_url('assets/backend')}}/css/alertify.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="{{base_url('assets/frontend')}}/img/favicon.png">
     @yield('css')
     <script>
         var SITE_URL = "<?php echo base_url(); ?>";
@@ -24,12 +25,17 @@
     <div id="wrapper">
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
-                <div class="sidebar-brand-text mx-3">Welcome</div>
+                <div class="sidebar-brand-text mx-3">RIA Advisory</div>
             </a>
             <hr class="sidebar-divider my-0">
             <li class="nav-item active">
+                <a class="nav-link" href="{{base_url('/')}}">
+                <i class="fas fa-long-arrow-alt-left"></i>
+                    <span>Go to Web Site</span></a>
+            </li>
+            <li class="nav-item active">
                 <a class="nav-link" href="{{base_url('admin')}}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                <i class="fas fa-home"></i>
                     <span>Home</span></a>
             </li>
             <hr class="sidebar-divider">
@@ -38,12 +44,12 @@
             </div>
             <li class="nav-item ">
                 <a class="nav-link" href="{{base_url('admin/aboutwhy/aboutus')}}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                <i class="fas fa-address-card"></i>
                     <span>About Us</span></a>
             </li>
             <li class="nav-item ">
                 <a class="nav-link" href="{{base_url('admin/aboutwhy/whysus')}}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                <i class="fas fa-question-circle"></i>
                     <span>Why Us</span></a>
             </li>
             <hr class="sidebar-divider">
@@ -52,12 +58,12 @@
             </div>
             <li class="nav-item ">
                 <a class="nav-link" href="{{base_url('admin/blog')}}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                <i class="fas fa-blog"></i>
                     <span>Blog</span></a>
             </li>
             <li class="nav-item ">
                 <a class="nav-link" href="{{base_url('admin/news')}}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                <i class="fas fa-newspaper"></i>
                     <span>News</span></a>
             </li>
             <hr class="sidebar-divider">
@@ -80,12 +86,12 @@
             </div>
             <li class="nav-item ">
                 <a class="nav-link" href="{{base_url('admin/application')}}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                <i class="fas fa-clone"></i>
                     <span>Create Application</span></a>
             </li>
             <li class="nav-item ">
                 <a class="nav-link" href="{{base_url('admin/contact')}}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                <i class="fas fa-clone"></i>
                     <span>View Applications</span></a>
             </li>
             <hr class="sidebar-divider">
@@ -94,7 +100,7 @@
             </div>
             <li class="nav-item ">
                 <a class="nav-link" href="{{base_url('admin/contact')}}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                <i class="fas fa-address-book"></i>
                     <span>Contact</span></a>
             </li>
             <hr class="sidebar-divider d-none d-md-block">
