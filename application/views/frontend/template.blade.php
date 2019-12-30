@@ -103,6 +103,7 @@
                                             <li class="nav-item"><a href="{{base_url('ourteam')}}" class="nav-link">Our Team</a></li> 
                                             <li class="nav-item"><a href="{{base_url('news')}}" class="nav-link">News</a></li> 
                                             <li class="nav-item"><a href="{{base_url('partners')}}" class="nav-link">Partners</a></li> 
+                                            <li class="nav-item"><a href="{{base_url('FAQ')}}" class="nav-link">FAQ</a></li> 
                                         </ul>
                                     </li>
 									<li class="nav-item"><a href="{{base_url('whyus')}}" class="nav-link">Why Us</a></li>
@@ -146,6 +147,9 @@
                                 <!-- <li><a href="https://www.glassdoor.co.in/Overview/Working-at-RIA-Advisory-EI_IE2981445.11,23.htm" target="_blank"><i class="flaticon-glassdoor-logo"></i></a></li>
                                 <li><a href="#" target="_blank"><i class="flaticon-youtube"></i></a></li> -->
                             </ul>
+                            <!-- Begin Mailchimp Signup Form -->
+ 
+                           
                         </div>
                     </div>
 
@@ -158,6 +162,7 @@
                                 <li><a href="{{base_url('ourteam')}}">Our Team</a></li>
                                 <li><a href="{{base_url('news')}}">News</a></li> 
                                 <li><a href="{{base_url('partners')}}">Partners</a></li> 
+                                <li><a href="{{base_url('FAQ')}}">FAQ</a></li> 
                             </ul>
                         </div>
                     </div>

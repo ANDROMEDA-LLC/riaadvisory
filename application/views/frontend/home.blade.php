@@ -1,5 +1,5 @@
 @extends('frontend/template')
-@section('title','Anasayfa')
+@section('title','Home')
 @section('icerik')
 <p style="display:none;"  class="menuactive">Home</p>
 <!-- Start Main Banner Area -->
