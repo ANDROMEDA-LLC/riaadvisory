@@ -77,7 +77,7 @@
                     <div class="container">
                         <div class="evolta-responsive-menu">
                             <div class="logo">
-                                <a href="index.html">
+                                <a href="{{base_url('/')}}">
                                     <img src="{{base_url('assets/frontend')}}/img/white-logo.png" alt="logo">
                                 </a>
                             </div>
@@ -88,24 +88,31 @@
                 <div class="evolta-nav">
                     <div class="container-fluid">
                         <nav class="navbar navbar-expand-md navbar-light">
-                            <a class="navbar-brand" href="index.html">
+                            <a class="navbar-brand" href="{{base_url('/')}}">
                                 <img src="{{base_url('assets/frontend')}}/img/white-logo.png" alt="logo">
                             </a>
 
                             <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                                 <ul class="navbar-nav">
-                                    <li class="nav-item"><a href="index.html" class="nav-link active">Home </a></li>
-									<li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-									<li class="nav-item"><a href="whyus.html" class="nav-link">Why Us</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+                                    <li class="nav-item"><a href="{{base_url('/')}}" class="nav-link active">Home </a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link">Company <i class="fas fa-chevron-down"></i></a>
                                         <ul class="dropdown-menu">
-                                            <li class="nav-item"><a href="single-resources.html" class="nav-link">Utilities</a></li>
+                                            <li class="nav-item"><a href="{{base_url('aboutus')}}" class="nav-link">About Us </a></li>
 
-                                            <li class="nav-item"><a href="single-resources.html" class="nav-link">Financial Services</a></li> 
+                                            <li class="nav-item"><a href="{{base_url('ourteam')}}" class="nav-link">Our Team</a></li> 
                                         </ul>
                                     </li>
-									<li class="nav-item"><a href="blog-1.html" class="nav-link">Work@Ria</a></li>
-                                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+									<li class="nav-item"><a href="{{base_url('whyus')}}" class="nav-link">Why Us</a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item"><a href="{{base_url('utilities')}}" class="nav-link">Utilities</a></li>
+
+                                            <li class="nav-item"><a href="{{base_url('services')}}" class="nav-link">Financial Services</a></li> 
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item"><a href="{{base_url('workRia')}}" class="nav-link">Work@Ria</a></li>
+                                    <li class="nav-item"><a href="{{base_url('blog')}}" class="nav-link">Blog</a></li>
+                                    <li class="nav-item"><a href="{{base_url('contact')}}" class="nav-link">Contact</a></li>
                                 </ul>
 
                                 

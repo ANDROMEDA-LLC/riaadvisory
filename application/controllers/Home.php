@@ -13,10 +13,20 @@ class Home extends CI_Controller
 
     public function index()
     {
-        $data['intro'] = $this->Home_model->introGetBlogModel();
-        $this->theme->display('frontend/home',$data);
+        //$data['intro'] = $this->Home_model->introGetBlogModel();
+        $this->theme->display('frontend/home');
     }
 
+    public function utilities()
+    {
+        $data['utilities'] = $this->Home_model->utilitiesDataModel();
+        $this->theme->display('frontend/utilities',$data);
+    }
+    public function services()
+    {
+        $data['services'] = $this->Home_model->servicesDataModel();
+        $this->theme->display('frontend/services',$data);
+    }
     public function blogDetay($blog)
     {
         $data['blog'] = $this->Home_model->homeblogFindModel($blog);
@@ -26,7 +36,33 @@ class Home extends CI_Controller
             $this->theme->display('frontend/404');
         }
     }
-
+    public function whyus()
+    {   
+        $data['whyus'] = $this->Home_model->whyusDataModel();
+        $this->theme->display('frontend/whyus',$data);
+    }
+    public function workRia()
+    {   
+        $data['workRia'] = $this->Home_model->workRiaDataModel();
+        $this->theme->display('frontend/workRia',$data);
+    }
+    public function blog()
+    {   
+        $data['blog'] = $this->Home_model->blogDataModel();
+        $this->theme->display('frontend/blog',$data);
+    }
+    public function aboutus()
+    {
+        $this->theme->display('frontend/aboutus');
+    }
+    public function contact()
+    {
+        $this->theme->display('frontend/contact');
+    }
+    public function ourteam()
+    {
+        $this->theme->display('frontend/ourteam');
+    }
     public function hakkimizda()
     {
         $this->theme->display('frontend/hakkimizda');
