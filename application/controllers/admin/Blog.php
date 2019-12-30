@@ -77,7 +77,7 @@ class Blog extends CI_Controller
             if ($this->form_validation->run()) {
                 $blog_data = array(
                     'baslik' => $data['baslik'],
-                    'icerik' => $data['icerik']
+                    'icerik' => htmlspecialchars($data['icerik'])
                 );
                 if ($baslik != $eski_baslik) {
                     $blog_data['slug'] = $data['slug'];

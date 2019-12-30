@@ -26,12 +26,11 @@ class Application extends CI_Controller
             $this->load->helper('blog');
             $this->load->library('form_validation');
             $data = $this->input->post();
-            $data['slug'] = safeUrl($data['baslik']);
             $this->form_validation->set_data($data);
             $this->form_validation->set_rules('baslik', 'title', 'required|min_length[5]');
             $this->form_validation->set_rules('icerik', 'content', 'required|min_length[5]');
-            $this->form_validation->set_rules('slug', 'title', 'required|is_unique[application.slug]');
             if ($this->form_validation->run()) {
+                $data['slug'] = safeUrl($data['baslik']).'-'.uniqid();
                 $blog_data = array(
                     'baslik' => $data['baslik'],
                     'icerik' => htmlspecialchars($data['icerik']),
@@ -63,18 +62,14 @@ class Application extends CI_Controller
             $eski_baslik = safeUrl($data['eskiBaslik']);
             $this->form_validation->set_rules('baslik', 'title', 'required|min_length[5]');
             $this->form_validation->set_rules('icerik', 'content', 'required|min_length[5]');
-            if ($baslik != $eski_baslik) {
-                $data['slug'] = $baslik;
-                $this->form_validation->set_rules('slug', 'title', 'required|is_unique[application.slug]');
-            }
             $this->form_validation->set_data($data);
             if ($this->form_validation->run()) {
                 $blog_data = array(
                     'baslik' => $data['baslik'],
-                    'icerik' => $data['icerik']
+                    'icerik' => htmlspecialchars($data['icerik'])
                 );
                 if ($baslik != $eski_baslik) {
-                    $blog_data['slug'] = $data['slug'];
+                    $blog_data['slug'] = $baslik.'-'.uniqid();
                 }
                 $updateBlog = $this->Application_model->applicationGuncelleModel($data['duzenlemeID'], $blog_data);
                 if ($updateBlog) {
