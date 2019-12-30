@@ -15,8 +15,8 @@ function sendEmail($to_email, $name, $message) {
     $ci->load->library('email', $config);
     $ci->email->set_newline("\r\n");
     $ci->email->from($to_email, $name);
-    $ci->email->to('aliosmannkeles@gmail.com');
-    $ci->email->subject('Blog sistesinden yeni bir e-postanız var .');
+    $ci->email->to('ali.osman0386@gmail.com');
+    $ci->email->subject('You have a new email from riaadvisory.com');
     $ci->email->message($message);
 
     if ($ci->email->send()) {
