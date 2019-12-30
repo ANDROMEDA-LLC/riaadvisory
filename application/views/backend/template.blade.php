@@ -90,14 +90,19 @@
                     <span>Create Application</span></a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link" href="{{base_url('admin/contact')}}">
+                <a class="nav-link" href="{{base_url('admin/personapp')}}">
                 <i class="fas fa-clone"></i>
                     <span>View Applications</span></a>
             </li>
             <hr class="sidebar-divider">
             <div class="sidebar-heading">
-                CONTACT
+                CONTACT and FAQ
             </div>
+            <li class="nav-item ">
+                <a class="nav-link" href="{{base_url('admin/faq')}}">
+                <i class="fas fa-address-book"></i>
+                    <span>FAQ</span></a>
+            </li>
             <li class="nav-item ">
                 <a class="nav-link" href="{{base_url('admin/contact')}}">
                 <i class="fas fa-address-book"></i>
