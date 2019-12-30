@@ -51,7 +51,7 @@ class Home_model extends CI_Model
             ->result(); // row() bir tane ve 1. sırada ki veri çeker , result() bütün veriyi döner . 
 
     }
-    function workRiaDetailDataModel($kod)
+    function workriaDetailDataModel($kod)
     {
         return $this->db->select('*')
             ->where('slug', $kod)

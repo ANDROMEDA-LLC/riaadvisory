@@ -510,7 +510,7 @@
                                 </div>
 
                                 <h3><a href="#">{{$item->baslik}}</a></h3>
-                                <p>@php echo htmlspecialchars_decode($item->icerik) @endphp</p>
+                                @php echo htmlspecialchars_decode(substr($item->icerik,0,150)) @endphp
                                 <a href="#" class="learn-more-btn">Read More <i class="flaticon-add-1"></i></a>
                             </div>
                         </div>
