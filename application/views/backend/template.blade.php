@@ -27,12 +27,7 @@
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
                 <div class="sidebar-brand-text mx-3">RIA Advisory</div>
             </a>
-            <hr class="sidebar-divider my-0">
-            <li class="nav-item active">
-                <a class="nav-link" href="{{base_url('/')}}">
-                <i class="fas fa-long-arrow-alt-left"></i>
-                    <span>Go to Web Site</span></a>
-            </li>
+            <hr class="sidebar-divider my-0">            
             <li class="nav-item active">
                 <a class="nav-link" href="{{base_url('admin')}}">
                 <i class="fas fa-home"></i>
@@ -107,6 +102,11 @@
                 <a class="nav-link" href="{{base_url('admin/contact')}}">
                 <i class="fas fa-address-book"></i>
                     <span>Contact</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{base_url('/')}}">
+                <i class="fas fa-long-arrow-alt-left"></i>
+                    <span>Go to Web Site</span></a>
             </li>
             <hr class="sidebar-divider d-none d-md-block">
             <div class="text-center d-none d-md-inline">
