@@ -52,6 +52,7 @@ class Home extends CI_Controller
         $workriadetail = $this->Home_model->workRiaDetailDataModel($kod);
         if ($workriadetail) {
             $data['workriadetail'] = $workriadetail;
+            $data['kod'] = $kod;
             $this->theme->display('frontend/workriadetail', $data);
         } else {
             redirect('/workRia');
@@ -124,6 +125,57 @@ class Home extends CI_Controller
             }
         } else {
             redirect('iletisim');
+        }
+    }
+
+    public function workriaform()
+    {
+        if ($this->input->post('submit')) {
+            $post_data = (object) $this->input->post();
+            $workriadetail = $this->Home_model->workRiaDetailDataModel($post_data->kod);
+            if ($workriadetail) {
+                $data['workriadetail'] = $workriadetail;
+                $data['kod'] = $post_data->kod;
+                $this->load->library('form_validation');
+                $this->form_validation->set_rules('name', 'name', 'required|min_length[3]');
+                $this->form_validation->set_rules('email', 'e-mail', 'required|valid_email');
+                $this->form_validation->set_rules('phone', 'phone', 'required|integer');
+                $this->form_validation->set_rules('position', 'position', 'required|min_length[3]');
+                $this->form_validation->set_rules('message', 'message', 'required');
+                if ($this->form_validation->run()) {
+                    $this->load->helper('workria');
+                    $image_upload = workriaFilesUpload('file');
+                    if ($image_upload->result == 1) {
+                        $contact_data = array(
+                            'name' => $post_data->name,
+                            'email' => $post_data->email,
+                            'phone' => $post_data->phone,
+                            'position' => $post_data->position,
+                            'file_link' => $image_upload->fileName,
+                            'message' => $post_data->message
+                        );
+                        $addContact = $this->Home_model->workriaEkleModel($contact_data);
+                        if ($addContact) {
+                            $this->session->set_flashdata('success', 'Your request is received. Thank you.');
+                            redirect('/workriadetail/'.$post_data->kod);
+                        } else {
+                            $this->session->set_flashdata('error', 'There was a problem, please try again.');
+                            $this->theme->display('frontend/workriadetail', $data);
+                        }
+                    } else {
+                        $this->session->set_flashdata('error', $image_upload->hata);
+                        $this->theme->display('frontend/workriadetail', $data);
+                    }
+                } else {
+                    $error_array = $this->form_validation->error_array();
+                    $this->session->set_flashdata('error', array_values($error_array)[0]);
+                    $this->theme->display('frontend/workriadetail', $data);
+                }
+            } else {
+                redirect('/workRia');
+            }
+        } else {
+            redirect('workRia');
         }
     }
 

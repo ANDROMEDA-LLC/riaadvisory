@@ -29,6 +29,7 @@
         <link rel="stylesheet" href="{{base_url('assets/frontend')}}/css/style.css">
         <!-- Responsive CSS -->
         <link rel="stylesheet" href="{{base_url('assets/frontend')}}/css/responsive.css">
+        <link rel="stylesheet" href="{{base_url('assets/frontend')}}/css/alertify.min.css">
         @yield('css')
 
         <title>Evolta - Big Data Company Startups Template</title>
@@ -235,6 +236,7 @@
         <script src="{{base_url('assets/frontend')}}/js/contact-form-script.js"></script>
         <!-- Main JS -->
         <script src="{{base_url('assets/frontend')}}/js/main.js"></script>
+        <script src="{{base_url('assets/frontend')}}/js/alertify.min.js"></script>
         @yield('js')
         <script>
         $(document).ready(function(){
