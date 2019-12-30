@@ -124,4 +124,12 @@ class Home_model extends CI_Model
         $this->db->insert('person_app', $data);
         return $this->db->insert_id();
     }
+
+    function faqDataModel(){
+        return $this->db->select('*')
+        ->order_by('create_date', 'DESC') 
+        ->get('faq')
+        ->result(); // row() bir tane ve en üste ki veri çeker result() bütün veriyi döner . 
+    }
+    
 }

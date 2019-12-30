@@ -95,7 +95,8 @@ class Home extends CI_Controller
     }
     public function FAQ()
     {
-        $this->theme->display('frontend/FAQ');
+        $data['faq'] = $this->Home_model->faqDataModel();
+        $this->theme->display('frontend/FAQ',$data);
     }
     public function partners()
     {
