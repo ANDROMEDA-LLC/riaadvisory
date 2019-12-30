@@ -49,14 +49,11 @@ class Faq extends CI_Controller
         echo json_encode($sonuc);
     }
 
-    public function applicationDuzenle()
+    public function faqDuzenle()
     {
         if ($this->input->post('form_post')) {
-            $this->load->helper('blog');
             $this->load->library('form_validation');
             $data = $this->input->post();
-            $baslik = safeUrl($data['baslik']);
-            $eski_baslik = safeUrl($data['eskiBaslik']);
             $this->form_validation->set_rules('baslik', 'title', 'required|min_length[5]');
             $this->form_validation->set_rules('icerik', 'content', 'required|min_length[5]');
             $this->form_validation->set_data($data);
@@ -65,12 +62,9 @@ class Faq extends CI_Controller
                     'baslik' => $data['baslik'],
                     'icerik' => htmlspecialchars($data['icerik'])
                 );
-                if ($baslik != $eski_baslik) {
-                    $blog_data['slug'] = $baslik.'-'.uniqid();
-                }
-                $updateBlog = $this->Faq_model->applicationGuncelleModel($data['duzenlemeID'], $blog_data);
+                $updateBlog = $this->Faq_model->faqGuncelleModel($data['duzenlemeID'], $blog_data);
                 if ($updateBlog) {
-                    $sonuc['result'] = 'Application updated successfully.';
+                    $sonuc['result'] = 'FAQ updated successfully.';
                 } else {
                     $sonuc['hata'] = 'There was a problem, please try again.';
                 }
@@ -84,19 +78,19 @@ class Faq extends CI_Controller
         echo json_encode($sonuc);
     }
 
-    public function applicationBul($id)
+    public function faqBul($id)
     {
-        $findBlog = $this->Faq_model->applicationbulModel($id);
+        $findBlog = $this->Faq_model->faqbulModel($id);
         $findBlog->icerik = htmlspecialchars_decode($findBlog->icerik);
         $sonuc['result'] = $findBlog;
         echo json_encode($sonuc);
     }
 
-    public function applicationSil($id)
+    public function faqSil($id)
     {
-        $findBlog = $this->Faq_model->applicationSilModel($id);
+        $findBlog = $this->Faq_model->faqSilModel($id);
         if ($findBlog) {
-            $sonuc['result'] = 'Application deleted successfully!';
+            $sonuc['result'] = 'FAQ deleted successfully!';
         } else {
             $sonuc['hata'] = 'There was a problem, please try again.';
         }

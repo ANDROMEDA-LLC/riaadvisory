@@ -35,7 +35,7 @@ $(document).ready(function () {
             if (e) {
                 $.ajax({
                     type: "Post",
-                    url: SITE_URL + "/admin/application/applicationSil/" + ID,
+                    url: SITE_URL + "/admin/faq/faqSil/" + ID,
                     cache: false,
                     dataType: "json",
                     data: {},
@@ -96,7 +96,7 @@ $(document).ready(function () {
 
             $.ajax({
                 type: "POST",
-                url: SITE_URL + "admin/application/applicationDuzenle",
+                url: SITE_URL + "admin/faq/faqDuzenle",
                 cache: false,
                 dataType: "json",
                 data: new FormData(this),
@@ -129,7 +129,7 @@ $(document).ready(function () {
         var ID = $(this).parent().parent().attr('id');
         $.ajax({
             type: "post",
-            url: SITE_URL + "admin/application/applicationBul/" + ID,
+            url: SITE_URL + "admin/faq/faqBul/" + ID,
             dataType: "json",
             cache: false,
             data: {},
@@ -142,7 +142,7 @@ $(document).ready(function () {
                     if (cevap.result) {
                         $("input[name=eskiBaslik]").val(cevap.result.baslik);
                         $("input[name=baslik]").val(cevap.result.baslik);
-                        CKEDITOR.instances['blog_icerik'].setData(cevap.result.icerik);
+                        $("textarea[name=icerik]").val(cevap.result.icerik);
                         $("input[name=duzenleme]").val(1);
                         $("input[name=duzenlemeID]").val(ID);
                         var kapaliacik = $("input[name=kapaliacik]").val();
