@@ -2,7 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class News extends CI_Controller
+class Application extends CI_Controller
 {
 
     public function __construct()
@@ -11,43 +11,37 @@ class News extends CI_Controller
         if ($this->session->userdata('login') == false) {
             redirect('login');
         }
-        $this->load->model('News_model');
+        $this->load->model('Application_model');
     }
 
     public function index()
     {
-        $data['blogs'] = $this->News_model->newsVeriAlModel();
-        $this->theme->display('backend/news', $data);
+        $data['blogs'] = $this->Application_model->applicationVeriAlModel();
+        $this->theme->display('backend/create_application', $data);
     }
 
-    public function newsEkle()
+    public function applicationEkle()
     {
         if ($this->input->post('form_post')) {
-            $this->load->helper('news');
+            $this->load->helper('blog');
             $this->load->library('form_validation');
             $data = $this->input->post();
             $data['slug'] = safeUrl($data['baslik']);
             $this->form_validation->set_data($data);
             $this->form_validation->set_rules('baslik', 'title', 'required|min_length[5]');
             $this->form_validation->set_rules('icerik', 'content', 'required|min_length[5]');
-            $this->form_validation->set_rules('slug', 'title', 'required|is_unique[news.slug]');
+            $this->form_validation->set_rules('slug', 'title', 'required|is_unique[application.slug]');
             if ($this->form_validation->run()) {
-                $image_upload = newsImageUpload('image');
-                if ($image_upload->result == 1) {
-                    $blog_data = array(
-                        'baslik' => $data['baslik'],
-                        'icerik' => htmlspecialchars($data['icerik']),
-                        'slug' => $data['slug'],
-                        'resim_yol' => $image_upload->fileName,
-                    );
-                    $addBlog = $this->News_model->newsEkleModel($blog_data);
-                    if ($addBlog) {
-                        $sonuc['result'] = 'News added successfully.';
-                    } else {
-                        $sonuc['hata'] = 'There was a problem, please try again.';
-                    }
+                $blog_data = array(
+                    'baslik' => $data['baslik'],
+                    'icerik' => htmlspecialchars($data['icerik']),
+                    'slug' => $data['slug'],
+                );
+                $addBlog = $this->Application_model->applicationEkleModel($blog_data);
+                if ($addBlog) {
+                    $sonuc['result'] = 'Application added successfully.';
                 } else {
-                    $sonuc['hata'] = $image_upload->hata;
+                    $sonuc['hata'] = 'There was a problem, please try again.';
                 }
             } else {
                 $error_array = $this->form_validation->error_array();
@@ -59,10 +53,10 @@ class News extends CI_Controller
         echo json_encode($sonuc);
     }
 
-    public function newsDuzenle()
+    public function applicationDuzenle()
     {
         if ($this->input->post('form_post')) {
-            $this->load->helper('news');
+            $this->load->helper('blog');
             $this->load->library('form_validation');
             $data = $this->input->post();
             $baslik = safeUrl($data['baslik']);
@@ -71,7 +65,7 @@ class News extends CI_Controller
             $this->form_validation->set_rules('icerik', 'content', 'required|min_length[5]');
             if ($baslik != $eski_baslik) {
                 $data['slug'] = $baslik;
-                $this->form_validation->set_rules('slug', 'title', 'required|is_unique[news.slug]');
+                $this->form_validation->set_rules('slug', 'title', 'required|is_unique[application.slug]');
             }
             $this->form_validation->set_data($data);
             if ($this->form_validation->run()) {
@@ -82,26 +76,11 @@ class News extends CI_Controller
                 if ($baslik != $eski_baslik) {
                     $blog_data['slug'] = $data['slug'];
                 }
-                if (!empty($_FILES['image']['name'])) {
-                    $image_upload = newsImageUpload('image');
-                    if ($image_upload->result == 1) {
-                        $blog_data['resim_yol'] = $image_upload->fileName;
-                        $updateBlog = $this->News_model->newsGuncelleModel($data['duzenlemeID'], $blog_data);
-                        if ($updateBlog) {
-                            $sonuc['result'] = 'News updated successfully.';
-                        } else {
-                            $sonuc['hata'] = 'There was a problem, please try again.';
-                        }
-                    } else {
-                        $sonuc['hata'] = $image_upload->hata;
-                    }
+                $updateBlog = $this->Application_model->applicationGuncelleModel($data['duzenlemeID'], $blog_data);
+                if ($updateBlog) {
+                    $sonuc['result'] = 'Application updated successfully.';
                 } else {
-                    $updateBlog = $this->News_model->newsGuncelleModel($data['duzenlemeID'], $blog_data);
-                    if ($updateBlog) {
-                        $sonuc['result'] = 'News updated successfully.';
-                    } else {
-                        $sonuc['hata'] = 'There was a problem, please try again.';
-                    }
+                    $sonuc['hata'] = 'There was a problem, please try again.';
                 }
             } else {
                 $error_array = $this->form_validation->error_array();
@@ -113,19 +92,19 @@ class News extends CI_Controller
         echo json_encode($sonuc);
     }
 
-    public function newsBul($id)
+    public function applicationBul($id)
     {
-        $findBlog = $this->News_model->newsbulModel($id);
+        $findBlog = $this->Application_model->applicationbulModel($id);
         $findBlog->icerik = htmlspecialchars_decode($findBlog->icerik);
         $sonuc['result'] = $findBlog;
         echo json_encode($sonuc);
     }
 
-    public function newsSil($id)
+    public function applicationSil($id)
     {
-        $findBlog = $this->News_model->newsSilModel($id);
+        $findBlog = $this->Application_model->applicationSilModel($id);
         if ($findBlog) {
-            $sonuc['result'] = 'News deleted successfully!';
+            $sonuc['result'] = 'Application deleted successfully!';
         } else {
             $sonuc['hata'] = 'There was a problem, please try again.';
         }

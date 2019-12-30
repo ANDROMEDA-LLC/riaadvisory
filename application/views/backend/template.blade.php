@@ -76,6 +76,20 @@
             </li>
             <hr class="sidebar-divider">
             <div class="sidebar-heading">
+            Work@Ria
+            </div>
+            <li class="nav-item ">
+                <a class="nav-link" href="{{base_url('admin/application')}}">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Create Application</span></a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="{{base_url('admin/contact')}}">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>View Applications</span></a>
+            </li>
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">
                 CONTACT
             </div>
             <li class="nav-item ">
