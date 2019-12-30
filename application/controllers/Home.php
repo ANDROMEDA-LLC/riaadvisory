@@ -13,19 +13,19 @@ class Home extends CI_Controller
 
     public function index()
     {
-        //$data['intro'] = $this->Home_model->introGetBlogModel();
-        $this->theme->display('frontend/home');
+        $data['blog'] = $this->Home_model->blogDataModel();
+        $this->theme->display('frontend/home', $data);
     }
 
     public function utilities()
     {
         $data['utilities'] = $this->Home_model->utilitiesDataModel();
-        $this->theme->display('frontend/utilities',$data);
+        $this->theme->display('frontend/utilities', $data);
     }
     public function services()
     {
         $data['services'] = $this->Home_model->servicesDataModel();
-        $this->theme->display('frontend/services',$data);
+        $this->theme->display('frontend/services', $data);
     }
     public function blogDetay($blog)
     {
@@ -37,23 +37,35 @@ class Home extends CI_Controller
         }
     }
     public function whyus()
-    {   
+    {
         $data['whyus'] = $this->Home_model->whyusDataModel();
-        $this->theme->display('frontend/whyus',$data);
+        $this->theme->display('frontend/whyus', $data);
     }
     public function workRia()
-    {   
-        $data['workRia'] = $this->Home_model->workRiaDataModel();
-        $this->theme->display('frontend/workRia',$data);
+    {
+        $data['workwithria'] = $this->Home_model->workRiaDataModel();
+        $this->theme->display('frontend/workRia', $data);
+    }
+
+    public function workriadetail($kod)
+    {
+        $workriadetail = $this->Home_model->workRiaDetailDataModel($kod);
+        if ($workriadetail) {
+            $data['workriadetail'] = $workriadetail;
+            $this->theme->display('frontend/workriadetail', $data);
+        } else {
+            redirect('/workRia');
+        }
     }
     public function blog()
-    {   
+    {
         $data['blog'] = $this->Home_model->blogDataModel();
-        $this->theme->display('frontend/blog',$data);
+        $this->theme->display('frontend/blog', $data);
     }
     public function aboutus()
     {
-        $this->theme->display('frontend/aboutus');
+        $data['aboutus'] = $this->Home_model->aboutusDataModel();
+        $this->theme->display('frontend/aboutus', $data);
     }
     public function contact()
     {

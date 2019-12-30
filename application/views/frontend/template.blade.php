@@ -78,7 +78,7 @@
                         <div class="evolta-responsive-menu">
                             <div class="logo">
                                 <a href="{{base_url('/')}}">
-                                    <img src="{{base_url('assets/frontend')}}/img/white-logo.png" alt="logo">
+                                    <img src="{{base_url('assets/frontend')}}/img/logo.jpg" alt="logo" width="143px">
                                 </a>
                             </div>
                         </div>
@@ -89,12 +89,12 @@
                     <div class="container-fluid">
                         <nav class="navbar navbar-expand-md navbar-light">
                             <a class="navbar-brand" href="{{base_url('/')}}">
-                                <img src="{{base_url('assets/frontend')}}/img/white-logo.png" alt="logo">
+                                <img src="{{base_url('assets/frontend')}}/img/logo.jpg" alt="logo" width="143px">
                             </a>
 
                             <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                                 <ul class="navbar-nav">
-                                    <li class="nav-item"><a href="{{base_url('/')}}" class="nav-link active">Home </a></li>
+                                    <li class="nav-item"><a href="{{base_url('/')}}" class="nav-link ">Home </a></li>
                                     <li class="nav-item"><a href="#" class="nav-link">Company <i class="fas fa-chevron-down"></i></a>
                                         <ul class="dropdown-menu">
                                             <li class="nav-item"><a href="{{base_url('aboutus')}}" class="nav-link">About Us </a></li>
@@ -236,5 +236,21 @@
         <!-- Main JS -->
         <script src="{{base_url('assets/frontend')}}/js/main.js"></script>
         @yield('js')
+        <script>
+        $(document).ready(function(){
+            $(".nav-link").removeClass("active");
+            $(".nav-link").each(function(){
+
+                var classN=$(this).text().trim();
+                var menuactive=$(".menuactive").text().trim();
+                console.log(classN +" "+ menuactive);
+                if(classN===menuactive){
+                    console.log(classN +" "+ menuactive);
+                    $(this).addClass("active");
+                }
+
+            });
+        });
+        </script>
     </body>
 </html>

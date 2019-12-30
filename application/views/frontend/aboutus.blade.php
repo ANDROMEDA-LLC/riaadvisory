@@ -1,6 +1,7 @@
 @extends('frontend/template')
 @section('title','About Us')
 @section('icerik')
+<p style="display:none;" class="menuactive">Company</p>
  <!-- Start Page Title Area -->
  <div class="page-title-area">
             <div class="container">
@@ -34,14 +35,8 @@
 
                     <div class="col-lg-6 col-md-12">
                         <div class="about-content">
-                            <span>About Us</span>
-                            <h2>We've Been Thriving in 4 Years The Tech Area</h2>
-                            <p>RIA Advisory is a young technology company formed in 2016 by a dynamic entrepreneur whose previous work experience included creating and developing new business in Oracle Corporation and BearingPoint Inc. Under his guidance the team flourished by delivering complex business transformation projects, especially in capital-intensive industries such as Utilities, Banking, Payment Services, Insurance, and Healthcare.</p>
-                            <br>
-							<h2>Achievement</h2>
-							<p>Founder of RIA was instrumental in the evolution of a premier Revenue Management and Billing Solution for Banking, Financial Services and Healthcare Insurance. The Oracle Customer Care and Billing utilities solution formed the baseline for the solution.</p>
-                            <p>The RIA team has been an integral part of complex CIS implementations, at firms such as KCPL, Nicor, Hydro Ottawa, Miami-dade and Toronto Hydro; our consultants at RIA Advisory have extensive experience in the Regulated and De-regulated Energy Market.</p>
-							<p>Our team has also worked in Financial Services and healthcare industries serving clients like Citibank, Visa, United Health Group, Deutsche Bank, Delta Dental and many others.</p>
+                            @php echo htmlspecialchars_decode($aboutus->content) @endphp
+                            
                         </div>
                     </div>
                 </div>

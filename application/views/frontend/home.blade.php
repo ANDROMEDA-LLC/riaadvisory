@@ -1,7 +1,7 @@
 @extends('frontend/template')
 @section('title','Anasayfa')
 @section('icerik')
-
+<p style="display:none;"  class="menuactive">Home</p>
 <!-- Start Main Banner Area -->
 <div class="main-banner">
   <div class="container-fluid">
@@ -502,68 +502,32 @@
     </div>
 
     <div class="row">
-      <div class="col-lg-4 col-md-6">
-        <div class="single-blog-post">
-          <div class="entry-thumbnail">
-            <a href="#"><img src="{{base_url('assets/frontend')}}/img/blog/1.jpg" alt="image"></a>
-          </div>
+      
+      @foreach ($blog as $item)
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-blog-post">
+                            <div class="entry-thumbnail">
+                                <a href="#"><img src="{{base_url('uploads/blog/').$item->resim_yol}}" alt="image"></a>
+                            </div>
 
-          <div class="entry-post-content">
-            <div class="entry-meta">
-              <ul>
-                <li><a href="#">Admin</a></li>
-                <li>August 15, 2019</li>
-              </ul>
-            </div>
+                            <div class="entry-post-content">
+                                <div class="entry-meta">
+                                    <ul>
+                                        <li><a href="#">Admin</a></li>
+                                        <li>{{$item->create_date}}</li>
+                                    </ul>
+                                </div>
 
-            <h3><a href="#">Making Peace With The Feast Or Famine Of Freelancing</a></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
-            <a href="#" class="learn-more-btn">Read More <i class="flaticon-add-1"></i></a>
-          </div>
-        </div>
-      </div>
+                                <h3><a href="#">{{$item->baslik}}</a></h3>
+                                <p>@php echo htmlspecialchars_decode($item->icerik) @endphp</p>
+                                <a href="#" class="learn-more-btn">Read More <i class="flaticon-add-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+      @endforeach
+     
 
-      <div class="col-lg-4 col-md-6">
-        <div class="single-blog-post">
-          <div class="entry-thumbnail">
-            <a href="#"><img src="{{base_url('assets/frontend')}}/img/blog/2.jpg" alt="image"></a>
-          </div>
-
-          <div class="entry-post-content">
-            <div class="entry-meta">
-              <ul>
-                <li><a href="#">Admin</a></li>
-                <li>August 18, 2019</li>
-              </ul>
-            </div>
-
-            <h3><a href="#">I Used The Web For A Day On A 50 MB Budget</a></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
-            <a href="#" class="learn-more-btn">Read More <i class="flaticon-add-1"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
-        <div class="single-blog-post">
-          <div class="entry-thumbnail">
-            <a href="#"><img src="{{base_url('assets/frontend')}}/img/blog/3.jpg" alt="image"></a>
-          </div>
-
-          <div class="entry-post-content">
-            <div class="entry-meta">
-              <ul>
-                <li><a href="#">Admin</a></li>
-                <li>August 15, 2019</li>
-              </ul>
-            </div>
-
-            <h3><a href="#">Here are the 5 most telling signs of micromanagement</a></h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod...</p>
-            <a href="#" class="learn-more-btn">Read More <i class="flaticon-add-1"></i></a>
-          </div>
-        </div>
-      </div>
+      
     </div>
   </div>
 </section>
