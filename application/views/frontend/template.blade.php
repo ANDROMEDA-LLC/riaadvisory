@@ -102,6 +102,7 @@
 
                                             <li class="nav-item"><a href="{{base_url('ourteam')}}" class="nav-link">Our Team</a></li> 
                                             <li class="nav-item"><a href="{{base_url('news')}}" class="nav-link">News</a></li> 
+                                            <li class="nav-item"><a href="{{base_url('partners')}}" class="nav-link">Partners</a></li> 
                                         </ul>
                                     </li>
 									<li class="nav-item"><a href="{{base_url('whyus')}}" class="nav-link">Why Us</a></li>
@@ -156,6 +157,7 @@
                                 <li><a href="{{base_url('aboutus')}}">About Us</a></li>
                                 <li><a href="{{base_url('ourteam')}}">Our Team</a></li>
                                 <li><a href="{{base_url('news')}}">News</a></li> 
+                                <li><a href="{{base_url('partners')}}">Partners</a></li> 
                             </ul>
                         </div>
                     </div>

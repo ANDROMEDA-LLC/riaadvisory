@@ -72,6 +72,10 @@ class Home extends CI_Controller
     {
         $this->theme->display('frontend/contact');
     }
+    public function partners()
+    {
+        $this->theme->display('frontend/partners');
+    }
     public function ourteam()
     {
         $this->theme->display('frontend/ourteam');
@@ -143,7 +147,7 @@ class Home extends CI_Controller
                             'position' => $post_data->position,
                             'file_link' => $image_upload->fileName,
                             'message' => $post_data->message,
-                            'app_id'=> $workriadetail->ID
+                            'app_id'=>$workriadetail->ID
                         );
                         $addContact = $this->Home_model->workriaEkleModel($contact_data);
                         if ($addContact) {
