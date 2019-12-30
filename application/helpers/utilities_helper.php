@@ -9,7 +9,7 @@ function utilitiesImageUpload($image) {
     $config = Array(
         'upload_path' => 'uploads/utilities',
         'file_name' => 'blog' . rand(),
-        'allowed_types' => 'gif|jpg|png',
+        'allowed_types' => 'gif|jpg|png|jpeg',
         'max_size' => 1024,
         'max_width' => 1204,
         'max_height' => 768,

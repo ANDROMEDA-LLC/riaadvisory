@@ -42,7 +42,7 @@ class Admin extends CI_Controller
                 if ($updateprofile) {
                     $email='e-mail';
                     $profile = new stdClass;
-                    $profile->ID = $data['name'];
+                    $profile->ID = $id;
                     $profile->ad_soyad = $data['name'];
                     $profile->$email= $data['email'];
                     $this->session->unset_userdata('admin');
