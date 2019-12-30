@@ -38,7 +38,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="single-blog-post">
                     <div class="entry-post-content">
-                        <h3><a href="#">{{$item->baslik}}</a></h3>
+                        <h3><a href="{{base_url('workriadetail/').$item->slug}}">{{$item->baslik}}</a></h3>
                         <a href="{{base_url('workriadetail/').$item->slug}}" class="learn-more-btn">Apply Now <i class="flaticon-add-1"></i></a>
                     </div>
                 </div>

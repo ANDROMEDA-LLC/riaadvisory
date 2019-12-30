@@ -152,7 +152,8 @@ class Home extends CI_Controller
                             'phone' => $post_data->phone,
                             'position' => $post_data->position,
                             'file_link' => $image_upload->fileName,
-                            'message' => $post_data->message
+                            'message' => $post_data->message,
+                            'app_id'=> $workriadetail->ID
                         );
                         $addContact = $this->Home_model->workriaEkleModel($contact_data);
                         if ($addContact) {
