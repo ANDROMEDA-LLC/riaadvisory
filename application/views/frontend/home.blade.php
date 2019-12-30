@@ -344,24 +344,23 @@
           <h3>Have a question?</h3>
           <p>Submit your details our experts will reply you with a quote very soon.</p>
 
-          <form>
+          <form action="{{base_url('contactform')}}" method="POST"  name="sentcontact">
             <div class="form-group">
-              <input type="text" name="name" id="name" class="form-control" placeholder="Name">
+              <input type="text" name="name" id="name" class="form-control" value="{{set_value('name')}}" placeholder="Name">
             </div>
-
             <div class="form-group">
-              <input type="email" name="email" id="email" class="form-control" placeholder="Email">
+              <input type="email" name="email" id="email" class="form-control" value="{{set_value('email')}}" placeholder="Email">
             </div>
-
             <div class="form-group">
-              <input type="text" name="company" id="company" class="form-control" placeholder="Company">
+              <input type="text" name="phone_number" id="phone_number" class="form-control" value="{{set_value('phone_number')}}" placeholder="Phone Number">
             </div>
-
             <div class="form-group">
-              <textarea name="message" id="message" cols="30" rows="4" class="form-control" placeholder="Message"></textarea>
+              <input type="text" name="company" id="company" class="form-control" value="{{set_value('company')}}" placeholder="Company">
             </div>
-
-            <button type="submit" class="btn btn-primary">Submit Message</button>
+            <div class="form-group">
+              <textarea name="message" id="message" cols="30" rows="4" class="form-control"  placeholder="Message">{{set_value('name')}}</textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" value="submit" name="submit" >Send Message</button>
           </form>
         </div>
       </div>

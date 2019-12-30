@@ -84,45 +84,46 @@ class Home extends CI_Controller
     {
         $this->theme->display('frontend/ourteam');
     }
-    public function iletisimForm()
+    public function contactForm()
     {
         if ($this->input->post('submit')) {
             $this->load->library('form_validation');
             $data = (object) $this->input->post();
-            $this->form_validation->set_rules('ad_soyad', 'Ad soyad', 'required|min_length[3]');
-            $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
-            $this->form_validation->set_rules('phone', 'Telefon', 'required|integer');
-            $this->form_validation->set_rules('message', 'Mesaj', 'required');
+            $this->form_validation->set_rules('name', 'name', 'required|min_length[3]');
+            $this->form_validation->set_rules('email', 'email', 'required|valid_email');
+            $this->form_validation->set_rules('phone_number', 'phone number', 'required|integer');
+            $this->form_validation->set_rules('message', 'message', 'required');
             if ($this->form_validation->run()) {
                 $this->load->helper('contact');
                 $result = sendEmail($data->email, $data->ad_soyad, $data->message);
                 if ($result) {
                     $contact_data = array(
-                        'ad_soyad' => $data->ad_soyad,
+                        'ad_soyad' => $data->name,
                         'email' => $data->email,
-                        'phone' => $data->phone,
+                        'phone' => $data->phone_number,
+                        'company' => $data->company,
                         'message' => $data->message
                     );
                     $addContact = $this->Home_model->contactEkleModel($contact_data);
                     if ($addContact) {
                         error_log($addContact);
-                        $this->session->set_flashdata('success', 'Talebiniz alınmıtır. En kısa sürede dönüş yapılacaktır.');
-                        redirect('iletisim');
+                        $this->session->set_flashdata('success', 'Your request is received. Thank you.');
+                        redirect('contact');
                     } else {
-                        $this->session->set_flashdata('error', 'Bir sorun oluştu tekrar deneyiniz.');
-                        $this->theme->display('frontend/iletisim');
+                        $this->session->set_flashdata('error', 'There was a problem, please try again.');
+                        $this->theme->display('frontend/contact');
                     }
                 } else {
-                    $this->session->set_flashdata('error', 'Mail Gönderilemedi. Lütfen Tekrar Deneyiniz');
-                    $this->theme->display('frontend/iletisim');
+                    $this->session->set_flashdata('error', 'There was a problem, please try again.');
+                    $this->theme->display('frontend/contact');
                 }
             } else {
                 $error_array = $this->form_validation->error_array();
                 $this->session->set_flashdata('error', array_values($error_array)[0]);
-                $this->theme->display('frontend/iletisim');
+                $this->theme->display('frontend/contact');
             }
         } else {
-            redirect('iletisim');
+            redirect('contact');
         }
     }
 

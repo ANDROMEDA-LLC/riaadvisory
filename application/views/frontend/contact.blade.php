@@ -29,42 +29,42 @@
                     <p>You can fill up this form to get in touch with us.</p>
                 </div>
                 <div class="contact-form">
-                    <form action="{{base_url('workriaform')}}" method="POST"  name="sentAplication" >
+                    <form action="{{base_url('contactform')}}" method="POST"  name="sentcontact" >
                         <div class="row">
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
-                                    <input type="text" name="name" id="name" class="form-control"  placeholder="Name">
+                                    <input type="text" name="name" id="name" class="form-control" value="{{set_value('name')}}"   placeholder="Name">
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
-                                    <input type="email" name="email" id="email" class="form-control"  placeholder="Email">
+                                    <input type="email" name="email" id="email" class="form-control" value="{{set_value('email')}}"  placeholder="Email">
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
-                                    <input type="text" name="phone_number" id="phone_number"  class="form-control" placeholder="Phone">
+                                    <input type="text" name="phone_number" id="phone_number" value="{{set_value('phone_number')}}"  class="form-control" placeholder="Phone">
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
-                                    <input type="text" name="msg_subject" id="msg_subject" class="form-control"  placeholder="Subject">
+                                    <input type="text" name="company" id="msg_subject" value="{{set_value('company')}}"  class="form-control"  placeholder="Company">
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
-                                    <textarea name="message" class="form-control" id="message" cols="30" rows="5"  placeholder="Your Message"></textarea>
+                                    <textarea name="message" class="form-control" id="message" cols="30" rows="5"  placeholder="Your Message">{{set_value('message')}}</textarea>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
+                            
                             <div class="col-lg-12 col-md-12">
-                                <button type="submit" class="btn btn-primary">Send Message</button>
-                                <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                <div class="clearfix"></div>
+                            <button type="submit" class="btn btn-primary" value="submit" name="submit" >Send Message</button>
+                            <div class="clearfix"></div>
                             </div>
                         </div>
                     </form>
@@ -88,4 +88,14 @@
                 </div>
             </div>
         </section>
+@endsection
+@section('js')
+<script type="text/javascript">
+<?php $ci = get_instance();
+    if($ci->session->flashdata('success')){ ?>
+    alertify.alert('SUCCESS',"<?php echo $ci->session->flashdata('success'); ?>");
+<?php }else if($ci->session->flashdata('error')){  ?>
+    alertify.alert('ERROR',"<?php echo $ci->session->flashdata('error'); ?>");
+  <?php } ?>
+</script>
 @endsection
