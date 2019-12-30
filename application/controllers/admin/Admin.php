@@ -14,7 +14,11 @@ class Admin extends CI_Controller
 
     public function index()
     {
-        $this->theme->display('backend/home');
+        $data['personapp'] = $this->Admin_model->personappGetModel();
+        $data['contact'] = $this->Admin_model->contactGetModel();
+        $data['blog'] = $this->Admin_model->blogGetModel();
+        $data['news'] = $this->Admin_model->newsGetModel();
+        $this->theme->display('backend/home',$data);
     }
 
     public function profile()
