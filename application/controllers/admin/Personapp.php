@@ -27,11 +27,11 @@ class Personapp extends CI_Controller
         echo json_encode($sonuc);
     }
 
-    public function contactSil($id)
+    public function personappSil($id)
     {
-        $findBlog = $this->Personapp_model->contactSilModel($id);
+        $findBlog = $this->Personapp_model->personappSilModel($id);
         if ($findBlog) {
-            $sonuc['result'] = 'Contact deleted successfully!';
+            $sonuc['result'] = 'Person deleted successfully!';
         } else {
             $sonuc['hata'] = 'There was a problem, please try again.';
         }

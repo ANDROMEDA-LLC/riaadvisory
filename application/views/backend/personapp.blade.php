@@ -91,6 +91,7 @@
                         <th>E-mail</th>
                         <th>Phone</th>
                         <th>Position</th>
+                        <th>Application Name</th>
                         <th>Date</th>
                         <th style="width: 220px">Transactions</th>
                     </tr>
@@ -102,6 +103,7 @@
                         <td>{{ $bilgiler->email}}</td>
                         <td>{{ $bilgiler->phone}}</td>
                         <td>{{ $bilgiler->position}}</td>
+                        <td><a href="{{base_url('workriadetail/').$bilgiler->slug}}" target="_blank">{{$bilgiler->baslik}}</a></td>
                         <td>{{ $bilgiler->create_date}}</td>
                         <td class="float-right">
                             <button id="duzenle" class="btn btn-primary btn-icon-split">

@@ -30,12 +30,14 @@ $(document).ready(function () {
     });
     //silme butonu
     $(document).on('click', 'button#sil', function (e) {
+        
         var ID = $(this).parent().parent().attr('id');
+        alert(ID);
         alertify.confirm("Are you sure you want to delete it ?", function (e) {
             if (e) {
                 $.ajax({
                     type: "Post",
-                    url: SITE_URL + "/admin/contact/contactSil/" + ID,
+                    url: SITE_URL + "/admin/personapp/personappSil/" + ID,
                     cache: false,
                     dataType: "json",
                     data: {},
