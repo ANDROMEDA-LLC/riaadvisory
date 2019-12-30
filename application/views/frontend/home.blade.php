@@ -39,6 +39,12 @@
 </div>
 <section class="featured-services-area ptb-110">
   <div class="container">
+  <div class="section-title" style="max-width: 850px;">
+            <h2>Providing consulting services to large enterprises to effectively manage their revenue lifecycle</h2>
+            <p style="max-width: 850px;">RIA Advisory LLC is a business and technology advisory consultancy that specializes in the field of Utilities, Technology & Financial Services. As the name “RIA – Recognize, Innovate & Accelerate” suggests, we believe in doing a thorough research of the client’s pain-points and needs, find innovative solutions and then, work with diligence to accelerate the plan on the path to success.</p>
+
+            <p style="max-width: 850px;">With a team of highly qualified and experienced individuals, we are the trusted advisors for our clients across several technology platforms. Our team of professionals, with an extensive experience in revenue lifecycle management, is helping clients achieve their business transformation goals with speed, ease, and financial viability.<p>
+        </div>
     <div class="row">
       <div class="featured-services-slides owl-carousel owl-theme">
         <div class="col-lg-12 col-md-12">
@@ -50,7 +56,7 @@
 
             <h3><a href="#">Recognize</a></h3>
             <p>The impact of Cloud Technology on process and people and people that drive them</p>
-            <a href="#" class="learn-more-btn">Learn More <i class="flaticon-add-1"></i></a>
+            <!-- <a href="#" class="learn-more-btn">Learn More <i class="flaticon-add-1"></i></a> -->
           </div>
         </div>
 
@@ -62,7 +68,7 @@
 
             <h3><a href="#">Innovate</a></h3>
             <p>New systems that make the processes scalable and efficient</p>
-            <a href="#" class="learn-more-btn">Learn More <i class="flaticon-add-1"></i></a>
+            <!-- <a href="#" class="learn-more-btn">Learn More <i class="flaticon-add-1"></i></a> -->
           </div>
         </div>
 
@@ -74,7 +80,7 @@
 
             <h3><a href="#">Accelerate</a></h3>
             <p>The path to revenue realization and effectiveness</p>
-            <a href="#" class="learn-more-btn">Learn More <i class="flaticon-add-1"></i></a>
+            <!-- <a href="#" class="learn-more-btn">Learn More <i class="flaticon-add-1"></i></a> -->
           </div>
         </div>
 
@@ -224,122 +230,108 @@
 </section>
 <!-- End How It Works Area -->
 
-<!-- Start Why Choose Us Area -->
-<section class="why-choose-us-area ptb-110">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-6 col-md-12 col-sm-12">
-        <div class="section-title">
-          <h2>Why Choose RiaAdvisory?</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-      </div>
+ <!-- Start Why Choose Us Area -->
+ <section class="why-choose-us-area ptb-110">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="section-title">
+                            <h2>Why Choose RiaAdvisory?</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
 
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="single-choose-us-box">
-          <div class="title">
-            <div class="icon">
-              <i class='bx bx-git-merge'></i>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-choose-us-box">
+                            <div class="title">
+                                <div class="icon">
+                                    <i class='bx bx-git-merge'></i>
+                                </div>
+                                <h3>Experienced Professionals</h3>
+                            </div>
+
+                            <div class="content">
+                                <h3>Experienced Professionals</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-choose-us-box">
+                            <div class="title">
+                                <div class="icon">
+                                    <i class='bx bx-down-arrow'></i>
+                                </div>
+                                <h3>Providing value</h3>
+                            </div>
+
+                            <div class="content">
+                                <h3>Providing value</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-choose-us-box">
+                            <div class="title">
+                                <div class="icon">
+                                    <i class='bx bx-expand'></i>
+                                </div>
+                                <h3>Understanding your business</h3>
+                            </div>
+
+                            <div class="content">
+                                <h3>Understanding your business</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-choose-us-box">
+                            <div class="title">
+                                <div class="icon">
+                                    <i class='bx bx-timer'></i>
+                                </div>
+                                <h3>Market Disrupter</h3>
+                            </div>
+
+                            <div class="content">
+                                <h3>Real-Time Alerts</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-choose-us-box">
+                            <div class="title">
+                                <div class="icon">
+                                    <i class='bx bx-trending-up'></i>
+                                </div>
+                                <h3>Client First Policy</h3>
+                            </div>
+
+                            <div class="content">
+                                <h3>Client First Policy</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                 
+                </div>
             </div>
-            <h3>Easy to Deploy</h3>
-          </div>
 
-          <div class="content">
-            <h3>Easy to Deploy</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="single-choose-us-box">
-          <div class="title">
-            <div class="icon">
-              <i class='bx bx-down-arrow'></i>
+            <div class="lines">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
             </div>
-            <h3>Cost Effective</h3>
-          </div>
-
-          <div class="content">
-            <h3>Cost Effective</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="single-choose-us-box">
-          <div class="title">
-            <div class="icon">
-              <i class='bx bx-expand'></i>
-            </div>
-            <h3>Simple & Flexible</h3>
-          </div>
-
-          <div class="content">
-            <h3>Simple & Flexible</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="single-choose-us-box">
-          <div class="title">
-            <div class="icon">
-              <i class='bx bx-timer'></i>
-            </div>
-            <h3>Real-Time Alerts</h3>
-          </div>
-
-          <div class="content">
-            <h3>Real-Time Alerts</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="single-choose-us-box">
-          <div class="title">
-            <div class="icon">
-              <i class='bx bx-trending-up'></i>
-            </div>
-            <h3>Massively Scalable</h3>
-          </div>
-
-          <div class="content">
-            <h3>Massively Scalable</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="single-choose-us-box">
-          <div class="title">
-            <div class="icon">
-              <i class='bx bx-lock-alt'></i>
-            </div>
-            <h3>Robust Security</h3>
-          </div>
-
-          <div class="content">
-            <h3>Robust Security</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="lines">
-    <div class="line"></div>
-    <div class="line"></div>
-    <div class="line"></div>
-  </div>
-</section>
-<!-- End Why Choose Us Area -->
+        </section>
+        <!-- End Why Choose Us Area -->
 
 
 

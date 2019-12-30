@@ -31,7 +31,7 @@
         <link rel="stylesheet" href="{{base_url('assets/frontend')}}/css/responsive.css">
         @yield('css')
 
-        <title>Evolta - Big Data Company Startups Template</title>
+        <title>RIA Advisory - Welcome to RIA Advisory</title>
 
         <link rel="icon" type="image/png" href="{{base_url('assets/frontend')}}/img/favicon.png">
     </head>
@@ -57,13 +57,13 @@
                 <div class="container-fluid">
                     <div class="row align-items-center">
                         <div class="col-lg-6 col-md-6">
-                            <p><span>Address:</span> <i class="flaticon-placeholder"></i> 2750 Quadra Street Victoria, Canada.</p>
+                            <p><span>Address:</span> <i class="flaticon-placeholder"></i> 2000 Ponce De Leon Blvd., Suite # 600 Coral Gables, FL 33134.</p>
                         </div>
 
                         <div class="col-lg-6 col-md-6">
                             <ul>
-                                <li><span>Contact Sales:</span> <i class="flaticon-phone-call"></i> <a href="tel:+44587154756">+44 587 154756</a></li>
-                                <li><span>Contact Email:</span> <i class="flaticon-message-closed-envelope"></i> <a href="mailto:evolta@gmail.com">evolta@gmail.com</a></li>
+                                <li><span>Contact Phone:</span> <i class="flaticon-phone-call"></i> <a href="tel:+44587154756">305.421.6303</a></li>
+                                <li><span>Contact Email:</span> <i class="flaticon-message-closed-envelope"></i> <a href="mailto:info@riaadvisory.com">info@riaadvisory.com</a></li>
                             </ul>
                         </div>
                     </div>
@@ -100,6 +100,7 @@
                                             <li class="nav-item"><a href="{{base_url('aboutus')}}" class="nav-link">About Us </a></li>
 
                                             <li class="nav-item"><a href="{{base_url('ourteam')}}" class="nav-link">Our Team</a></li> 
+                                            <li class="nav-item"><a href="{{base_url('news')}}" class="nav-link">News</a></li> 
                                         </ul>
                                     </li>
 									<li class="nav-item"><a href="{{base_url('whyus')}}" class="nav-link">Why Us</a></li>
@@ -132,28 +133,26 @@
                         <div class="single-footer-widget">
                             <div class="logo">
                                 <a href="#"><img src="{{base_url('assets/frontend')}}/img/white-logo.png" alt="image"></a>
-                                <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan.</p>
+                                <p>We Help Businesses Innovate and Grow</p>
                             </div>
 
                             <ul class="social">
-                                <li><a href="#" target="_blank"><i class="flaticon-facebook-letter-logo"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="flaticon-twitter-black-shape"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="flaticon-instagram-logo"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="flaticon-youtube"></i></a></li>
+                                <li><a href="https://www.facebook.com/ria.advisory/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/riaadvisory" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                <!-- <li><a href="https://www.glassdoor.co.in/Overview/Working-at-RIA-Advisory-EI_IE2981445.11,23.htm" target="_blank"><i class="flaticon-glassdoor-logo"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="flaticon-youtube"></i></a></li> -->
                             </ul>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="single-footer-widget">
-                            <h3>Services</h3>
+                            <h3>Company</h3>
 
                             <ul class="footer-services-list">
-                                <li><a href="#">Product Engineering</a></li>
-                                <li><a href="#">UX/UI Design</a></li>
-                                <li><a href="#">Big Data Analysis</a></li>
-                                <li><a href="#">Desktop Applications</a></li>
-                                <li><a href="#">Mobile Applications</a></li>
+                                <li><a href="{{base_url('aboutus')}}">About Us</a></li>
+                                <li><a href="{{base_url('ourteam')}}">Our Team</a></li>
+                                <li><a href="{{base_url('news')}}">News</a></li> 
                             </ul>
                         </div>
                     </div>
@@ -163,11 +162,13 @@
                             <h3>Quick Links</h3>
 
                             <ul class="quick-links-list">
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">Support</a></li>
-                                <li><a href="#">Applications</a></li>
+                                
+                                <li><a href="{{base_url('blog')}}">Blog</a></li>
+                                <li><a href="{{base_url('contact')}}">Contact</a></li>
+                                <li><a href="{{base_url('whyus')}}">Why Us</a></li>
+                                <li><a href="{{base_url('Utilities')}}">Utilities</a></li>
+                                <li><a href="{{base_url('services')}}">Financial Services</a></li>
+                                <li><a href="{{base_url('workRia')}}">Work@Ria</a></li>
                             </ul>
                         </div>
                     </div>
@@ -177,10 +178,10 @@
                             <h3>Contacts</h3>
 
                             <ul class="footer-contact-list">
-                                <li><span>Address:</span> 2750 Quadra Street Victoria, Canada</li>
-                                <li><span>Email:</span> <a href="#">evolta@gmail.com</a></li>
-                                <li><span>Phone:</span> <a href="#">+44 587 154756</a></li>
-                                <li><span>Fax:</span> <a href="#">+44 785 4578964</a></li>
+                                <li><span>Address:</span> 2000 Ponce De Leon Blvd., Suite # 600 Coral Gables, FL 33134</li>
+                                <li><span>Email:</span> <a href="mailto:info@riaadvisory.com">info@riaadvisory.com</a></li>
+                                <li><span>Phone:</span> <a href="#">305.421.6303</a></li> 
+                                <li><p style="color:#4ac728;">“A ISO 27001” AND “SOC2” CERTIFIED COMPANY</p></li>
                             </ul>
                         </div>
                     </div>
@@ -190,7 +191,7 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-lg-6 col-md-6 col-sm-6">
-                            <p>Copyright 2019 <a href="#">Evolta</a>. All Rights Reserved.</p>
+                            <p>Copyright {{date('Y')}} <a href="#">RIA Advisory</a>. All Rights Reserved.</p>
                         </div>
 
                         <div class="col-lg-6 col-md-6 col-sm-6">
