@@ -148,8 +148,7 @@
                                 <li><a href="#" target="_blank"><i class="flaticon-youtube"></i></a></li> -->
                             </ul>
                             <!-- Begin Mailchimp Signup Form -->
- 
-                           
+                          
                         </div>
                     </div>
 
@@ -194,21 +193,49 @@
                                 <li><p style="color:#4ac728;">“A ISO 27001” AND “SOC2” CERTIFIED COMPANY</p></li>
                             </ul>
                         </div>
+                    </div> 
+                   
+                </div>
+                <hr style="border-top: 1px solid rgb(36, 57, 92);">
+                <div class="faq-contact" style="margin-top: 20px;">
+                    <div class="section-title" style="margin-bottom: 10px;">
+                        <h2 style="color:#fff;font-size: 17px;">Subscribe to Our Newsletter</h2>
+                     </div>
+
+                    <div class="faq-contact-form" style="max-width: 400px;">
+                        <form action="https://riaadvisory.us4.list-manage.com/subscribe/post?u=56c6122d42b02d8dbc7dda708&amp;id=1adf02e173" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group">
+                                        <input type="email" name="EMAIL" id="email mce-EMAIL" class="form-control required email" required data-error="Please enter your email" placeholder="Enter Your Email" style="height: 40px;">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12">
+                                <div id="mce-responses" class="clear">
+                                <div class="response" id="mce-error-response" style="display:none;color:#fff;"></div>
+                                <div class="response" id="mce-success-response" style="display:none;color:#fff;"></div>
+                                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_56c6122d42b02d8dbc7dda708_1adf02e173" tabindex="-1" value=""></div>
+                                    <button type="submit" class="btn btn-primary" style="font-size: 15px;padding: 10px 32px 12px;">Subscribe</button>
+                                    <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
+        
             </div>
-            <div class="copyright-area">
+            <div class="copyright-area" style="    margin-top: 20px;">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-lg-6 col-md-6 col-sm-6">
-                            <p>Copyright {{date('Y')}} <a href="#">RIA Advisory</a>. All Rights Reserved.</p>
+                            <p style="font-size: 12px;">Copyright {{date('Y')}} <a href="#">RIA Advisory</a>. All Rights Reserved.</p>
                         </div>
 
                         <div class="col-lg-6 col-md-6 col-sm-6">
-                            <ul>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Terms & Conditions</a></li>
-                            </ul>
+                            
                         </div>
                     </div>
                 </div>
@@ -264,5 +291,7 @@
             });
         });
         </script>
+        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<!--End mc_embed_signup-->
     </body>
 </html>

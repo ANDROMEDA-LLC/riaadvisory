@@ -37,7 +37,7 @@
                             <div class="entry-post-content">
                                 <div class="entry-meta">
                                     <ul>
-                                        <li><a href="#">Admin</a></li>
+                                        <li><a>Admin</a></li>
                                         <li>{{$item->create_date}}</li>
                                     </ul>
                                 </div>
