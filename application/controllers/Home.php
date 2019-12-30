@@ -76,16 +76,6 @@ class Home extends CI_Controller
     {
         $this->theme->display('frontend/ourteam');
     }
-    public function hakkimizda()
-    {
-        $this->theme->display('frontend/hakkimizda');
-    }
-
-    public function iletisim()
-    {
-        $this->theme->display('frontend/iletisim');
-    }
-
     public function iletisimForm()
     {
         if ($this->input->post('submit')) {
@@ -157,7 +147,7 @@ class Home extends CI_Controller
                         $addContact = $this->Home_model->workriaEkleModel($contact_data);
                         if ($addContact) {
                             $this->session->set_flashdata('success', 'Your request is received. Thank you.');
-                            redirect('/workriadetail/'.$post_data->kod);
+                            redirect('/workriadetail/' . $post_data->kod);
                         } else {
                             $this->session->set_flashdata('error', 'There was a problem, please try again.');
                             $this->theme->display('frontend/workriadetail', $data);
@@ -177,12 +167,5 @@ class Home extends CI_Controller
         } else {
             redirect('workRia');
         }
-    }
-
-    public function email()
-    {
-        $this->load->helper('contact');
-        $result = sendEmail('aliosmannkeles@gmail.com', 'ali osman', 'deneme');
-        echo $result;
     }
 }
