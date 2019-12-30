@@ -95,7 +95,7 @@ class Home extends CI_Controller
             $this->form_validation->set_rules('message', 'message', 'required');
             if ($this->form_validation->run()) {
                 $this->load->helper('contact');
-                $result = sendEmail($data->email, $data->ad_soyad, $data->message);
+                $result = sendEmail($data->email, $data->name, $data->message);
                 if ($result) {
                     $contact_data = array(
                         'ad_soyad' => $data->name,
