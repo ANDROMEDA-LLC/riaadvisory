@@ -4,7 +4,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'home';
 
 //admin url
+$route['admin/profile'] = 'admin/admin/profile';
 $route['(?i)admin'] = 'admin/admin';
+
 
 //home için
 $route['(?i)login'] = 'login/index';
