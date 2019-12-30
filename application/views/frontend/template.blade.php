@@ -114,9 +114,11 @@
                                     </li>
                                     <li class="nav-item"><a href="{{base_url('workRia')}}" class="nav-link">Work@Ria</a></li>
                                     <li class="nav-item"><a href="{{base_url('blog')}}" class="nav-link">Blog</a></li>
-                                    <li class="nav-item"><a href="{{base_url('contact')}}" class="nav-link">Contact</a></li>
+                                     
                                 </ul>
-
+                                <div class="others-options">
+                                    <a href="{{base_url('contact')}}" class="btn btn-primary">Contact</a>
+                                </div>
                                 
                             </div>
                         </nav>

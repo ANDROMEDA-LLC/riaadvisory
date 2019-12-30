@@ -29,7 +29,7 @@
                 <div class="section-title">
                     <span>Message Us</span>
                     <h2>Drop us Message for any Query</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>You can fill up this form to get in touch with us.</p>
                 </div>
 
                 <div class="contact-form">
@@ -83,17 +83,17 @@
                     <div class="contact-info-content">
                         <h3>Contact us by Phone Number or Email Address</h3>
                         <h2>
-                            <a href="tel:+0881306298615">+088 130 629 8615</a>
+                            <a href="tel:305.421.6303">305.421.6303</a>
                             <span>OR</span>
-                            <a href="mailto:evolta@gmail.com">evolta@gmail.com</a>
+                            <a href="mailto: info@riaadvisory.com"> info@riaadvisory.com</a>
                         </h2>
 
                         <ul class="social">
-                            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                            <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                            <!-- <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li> -->
+                            <li><a href="https://www.facebook.com/ria.advisory/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/riaadvisory" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                            <!-- <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li> -->
                         </ul>
                     </div>
                 </div>

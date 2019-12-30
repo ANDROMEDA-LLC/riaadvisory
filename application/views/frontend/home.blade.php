@@ -12,8 +12,8 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>
 
           <div class="btn-box">
-            <a href="#" class="btn btn-primary">Try It Free</a>
-            <a href="#" class="btn btn-light">Request A Demo</a>
+            <a href="{{base_url('utilities')}}" class="btn btn-primary">Utilities</a>
+            <a href="{{base_url('services')}}" class="btn btn-light">Financial Services</a>
           </div>
         </div>
       </div>
