@@ -43,7 +43,7 @@
                                 </div>
 
                                 <h3><a href="{{base_url('blogdetail/').$item->slug}}">{{$item->baslik}}</a></h3>
-                                <p>@php echo htmlspecialchars_decode($item->icerik) @endphp</p>
+                                <p>@php echo htmlspecialchars_decode(substr($item->icerik,0,150)) @endphp</p>
                                 <a href="{{base_url('blogdetail/').$item->slug}}" class="learn-more-btn">Read More <i class="flaticon-add-1"></i></a>
                             </div>
                         </div>

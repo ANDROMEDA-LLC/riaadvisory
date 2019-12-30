@@ -1,7 +1,7 @@
 @extends('frontend/template')
 @section('title','Blog')
 @section('icerik')
-<p style="display:none;" class="menuactive">Company</p>
+<p style="display:none;" class="menuactive">Blog</p>
         <!-- Start Page Title Area -->
         <div class="page-title-area">
             <div class="container">
