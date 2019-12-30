@@ -4,7 +4,15 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+        <meta name="generator" content="php codeigniter" />
+        <link rel="canonical" href="{{base_url('services')}}" />
+        <link rel='shortlink' href="{{base_url('services')}}" />
+        <link rel="alternate" type="application/json+oembed" href="https://riaadvisory.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Friaadvisory.com%2Ffinancial-services%2F" />
+        <link rel="alternate" type="text/xml+oembed" href="https://riaadvisory.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Friaadvisory.com%2Ffinancial-services%2F&#038;format=xml" />
+        <link rel="icon" href="https://riaadvisory.com/wp-content/uploads/2019/02/ria_favicon.png" sizes="32x32" />
+        <link rel="icon" href="https://riaadvisory.com/wp-content/uploads/2019/02/ria_favicon.png" sizes="192x192" />
+        <link rel="apple-touch-icon-precomposed" href="https://riaadvisory.com/wp-content/uploads/2019/02/ria_favicon.png" />
+        <meta name="msapplication-TileImage" content="https://riaadvisory.com/wp-content/uploads/2019/02/ria_favicon.png" />
         <!-- Bootstrap Min CSS -->
         <link rel="stylesheet" href="{{base_url('assets/frontend')}}/css/bootstrap.min.css">
         <!-- Animate Min CSS -->
