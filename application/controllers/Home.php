@@ -63,10 +63,31 @@ class Home extends CI_Controller
         $data['blog'] = $this->Home_model->blogDataModel();
         $this->theme->display('frontend/blog', $data);
     }
+    public function news()
+    {
+        $data['news'] = $this->Home_model->newsDataModel();
+        $this->theme->display('frontend/news', $data);
+    }
+    public function newsdetail($kod)
+    {
+         $data['newsdetail'] = $this->Home_model->newsdetailDataModel($kod);
+         $data['latestnews'] = $this->Home_model->latestnewsDataModel();
+         $this->theme->display('frontend/newsdetail', $data);
+    }
+    public function blogdetail($kod)
+    {
+         $data['blogdetail'] = $this->Home_model->blogdetailDataModel($kod);
+         $data['latestblog'] = $this->Home_model->latestblogDataModel();
+         $this->theme->display('frontend/blogdetail', $data);
+    }
     public function aboutus()
     {
         $data['aboutus'] = $this->Home_model->aboutusDataModel();
         $this->theme->display('frontend/aboutus', $data);
+    }
+    public function companyservice()
+    { 
+        $this->theme->display('frontend/companyservice');
     }
     public function contact()
     {

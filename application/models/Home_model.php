@@ -65,6 +65,39 @@ class Home_model extends CI_Model
             ->get('blog')
             ->result(); // row() bir tane ve 1. sırada ki veri çeker , result() bütün veriyi döner . 
     }
+    function newsDataModel()
+    {
+        return $this->db->select('*')
+            ->order_by('create_date', 'DESC')
+            ->get('news')
+            ->result(); // row() bir tane ve 1. sırada ki veri çeker , result() bütün veriyi döner . 
+    }
+    function newsdetailDataModel($kod){
+        return $this->db->select('*')
+        ->where('slug', $kod)
+        ->get('news')
+        ->row(); // row() bir tane ve en üste ki veri çeker result() bütün veriyi döner . 
+    }
+    function latestnewsDataModel(){
+        return $this->db->select('*')
+        ->order_by('create_date', 'DESC') 
+        ->limit(3)
+        ->get('news')
+        ->result(); // row() bir tane ve en üste ki veri çeker result() bütün veriyi döner . 
+    }
+    function blogdetailDataModel($kod){
+        return $this->db->select('*')
+        ->where('slug', $kod)
+        ->get('blog')
+        ->row(); // row() bir tane ve en üste ki veri çeker result() bütün veriyi döner . 
+    }
+    function latestblogDataModel(){
+        return $this->db->select('*')
+        ->order_by('create_date', 'DESC') 
+        ->limit(3)
+        ->get('blog')
+        ->result(); // row() bir tane ve en üste ki veri çeker result() bütün veriyi döner . 
+    }
     function aboutusDataModel()
     {
         return $this->db->select('*')

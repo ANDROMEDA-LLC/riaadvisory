@@ -107,7 +107,7 @@
                                         </ul>
                                     </li>
 									<li class="nav-item"><a href="{{base_url('whyus')}}" class="nav-link">Why Us</a></li>
-                                    <li class="nav-item"><a href="#" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+                                    <li class="nav-item"><a href="{{base_url('companyservice')}}" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
                                         <ul class="dropdown-menu">
                                             <li class="nav-item"><a href="{{base_url('utilities')}}" class="nav-link">Utilities</a></li>
 
