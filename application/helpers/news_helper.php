@@ -10,9 +10,7 @@ function newsImageUpload($image) {
         'upload_path' => 'uploads/news',
         'file_name' => 'blog' . rand(),
         'allowed_types' => 'gif|jpg|png|jpeg',
-        'max_size' => 1024,
-        'max_width' => 1204,
-        'max_height' => 768,
+        'max_size' => 5120,
         'remove_spaces' => true
     );
     $ci->load->library('upload', $config);
