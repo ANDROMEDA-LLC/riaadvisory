@@ -66,3 +66,4 @@
         <!-- End Blog Area -->
 
 @endsection
+

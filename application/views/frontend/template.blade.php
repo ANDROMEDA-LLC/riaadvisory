@@ -296,7 +296,36 @@
             });
         });
         </script>
+        <script>
+$(document).ready(function(){
+    $(".single-blog-post .entry-thumbnail a img").each(function(){
+        var h=$(this).height();
+        var w=$(this).width();  
+        if(300 > h){
+            var diff=300 - h;
+            $(this).css("margin-top",diff/2+"px");
+        }else if(350 > w){
+            var diff=350 - w;
+            $(this).css("margin-left",diff/2+"px");
+        }
+
+    });
+});
+</script>
         <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 <!--End mc_embed_signup-->
     </body>
 </html>
+<style>
+    .single-blog-post .entry-thumbnail a{
+        width: 350px !important;
+        height: 300px !important;
+    }
+.single-blog-post .entry-thumbnail a img{   
+    max-width: 100%;
+    max-height: 100%;
+    width: auto; 
+    height: auto;
+
+}
+</style>
