@@ -333,7 +333,7 @@
     <script type="text/javascript">
         $.cookieMessage({
             'mainMessage': 'By using this website, you agree to our use of cookies. We use cookies to provide you with a great experience and to help our website run effectively. ',
-            'acceptButton': 'Accept',
+            'acceptButton': 'X',
             'fontSize': '11px',
             'backgroundColor': '#222',
         });

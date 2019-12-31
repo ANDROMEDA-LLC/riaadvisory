@@ -1,4 +1,4 @@
-(function ( $ ) {
+(function ($) {
 
     var settings = {};
 
@@ -17,14 +17,14 @@
             cookieName: 'cookieMessage'
         };
 
-        settings = $.extend( {}, defaults, options );
+        settings = $.extend({}, defaults, options);
         ready();
     }
 
     function ready() {
         var coo = getCookie(settings.cookieName);
         if (coo != "true") {
-            $(document).ready(function() {
+            $(document).ready(function () {
                 cookieMessageGenerate();
             })
         }
@@ -50,9 +50,9 @@
     }
 
     function cookieMessageGenerate() {
-        var html = '<div id="cookie-msg">'+
-            '<span class="msg">'+settings.mainMessage+
-            '<a href="" class="btn-aceptar">'+settings.acceptButton+'</a>'+
+        var html = '<div id="cookie-msg">' +
+            '<span class="msg">' + settings.mainMessage +
+            '<a href="" class="btn-aceptar">' + settings.acceptButton + '</a>' +
             '</span></div>';
 
         $("body").append(html);
@@ -66,7 +66,7 @@
             'background-color': settings.backgroundColor,
             'color': settings.fontColor,
             'font-size': settings.fontSize,
-            'z-index' : '99999'
+            'z-index': '99999'
         });
 
         $("#cookie-msg a").css({
@@ -75,19 +75,15 @@
         });
 
         $("#cookie-msg a.btn-aceptar").css({
-            'padding': '5px 10px',
-            'border-radius': '5px',
-            'background-color': settings.btnBackgroundColor,
             'color': settings.btnFontColor,
             'font-size': settings.btnFontSize,
             'text-decoration': 'none',
-            'width' :'6%',
-            'margin-right': 'auto',
-            'margin-left': 'auto',
-            'margin-top': '5px'
+            'position': 'absolute',
+            'bottom': '35%',
+            'right': '26px'
         });
 
-        $("#cookie-msg a.btn-aceptar").on("click", function(){
+        $("#cookie-msg a.btn-aceptar").on("click", function () {
             var coo = setCookie(settings.cookieName, true, settings.expirationDays);
             $("#cookie-msg").remove();
 
@@ -95,4 +91,4 @@
         })
     }
 
-}( jQuery ));
+}(jQuery));
