@@ -25,7 +25,7 @@
         <!-- End Page Title Area -->
 
         <!-- Start Resources Details Area -->
-        <section class="resources-details-area ptb-110">
+        <section class="resources-details-area ptb-110" id="content-desktop">
             <div class="container">
             @php $i=0 @endphp
             @foreach ($utilities as $item)
@@ -39,6 +39,28 @@
                     <div class="resources-details-image wow fadeInUp" style="max-width:40%;">
                         <img src="{{base_url('uploads/utilities/').$item->resim_yol}}" alt="image" style="width:100%;">
                     </div>
+                </div>
+                @php $i++ @endphp
+            @endforeach
+                
+               
+            </div>
+        </section>
+        <section class="resources-details-area ptb-110" id="content-mobile">
+            <div class="container">
+            @php $i=0 @endphp
+            @foreach ($utilities as $item)
+            @php echo $i!=0 ? '<hr>' : null @endphp
+            <div class="resources-details-overview">
+                
+            <div class="resources-details-image wow fadeInUp" style="max-width:100%;">
+                        <img src="{{base_url('uploads/utilities/').$item->resim_yol}}" alt="image" style="width:100%;">
+                    </div>
+                    <div class="resources-details-desc" style="flex:none;max-width:100%;">
+                        <h3>{{$item->baslik}}</h3>
+                        @php echo htmlspecialchars_decode($item->icerik) @endphp
+                        </div>
+
                 </div>
                 @php $i++ @endphp
             @endforeach
