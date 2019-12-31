@@ -498,7 +498,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="single-blog-post">
                             <div class="entry-thumbnail">
-                                <a href="#"><img src="{{base_url('uploads/blog/').$item->resim_yol}}" alt="image"></a>
+                                <a href="{{base_url('blogdetail/').$item->slug}}"><img src="{{base_url('uploads/blog/').$item->resim_yol}}" alt="image"></a>
                             </div>
 
                             <div class="entry-post-content">
@@ -509,9 +509,9 @@
                                     </ul>
                                 </div>
 
-                                <h3><a href="#">{{$item->baslik}}</a></h3>
+                                <h3><a href="{{base_url('blogdetail/').$item->slug}}">{{$item->baslik}}</a></h3>
                                 @php echo htmlspecialchars_decode(substr($item->icerik,0,150)) @endphp
-                                <a href="#" class="learn-more-btn">Read More <i class="flaticon-add-1"></i></a>
+                                <a href="{{base_url('blogdetail/').$item->slug}}" class="learn-more-btn">Read More <i class="flaticon-add-1"></i></a>
                             </div>
                         </div>
                     </div>
