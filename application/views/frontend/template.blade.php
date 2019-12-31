@@ -275,7 +275,7 @@
         });
     </script>
     <script>
-        $(document).ready(function() {
+        $(window).load(function() {
             $(".single-blog-post .entry-thumbnail a img").each(function() {
                 var h = $(this).height();
                 var w = $(this).width();
