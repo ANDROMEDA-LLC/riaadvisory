@@ -29,7 +29,7 @@
     <link rel="icon" type="image/png" href="{{base_url('assets/frontend')}}/img/favicon.png">
     <style>
         .single-blog-post .entry-thumbnail a {
-            width: 350px !important;
+            width: 100% !important;
             height: 300px !important;
         }
 
@@ -223,7 +223,7 @@
             </div>
 
         </div>
-        <div class="copyright-area" style="    margin-top: 20px;">
+        <div class="copyright-area" style="margin-top: 20px;">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-6 col-sm-6">
@@ -277,11 +277,31 @@
             $(".single-blog-post .entry-thumbnail a img").each(function() {
                 var h = $(this).height();
                 var w = $(this).width();
+                var pw = $(this).parent("a").width();
                 if (300 > h) {
                     var diff = 300 - h;
                     $(this).css("margin-top", diff / 2 + "px");
-                } else if (350 > w) {
-                    var diff = 350 - w;
+                } 
+                 if (pw > w) {
+                   
+                    var diff = pw - w;
+                    $(this).css("margin-left", diff / 2 + "px");
+                }
+
+            });
+        });
+        $(window).on('resize', function(){
+            $(".single-blog-post .entry-thumbnail a img").each(function() {
+                var h = $(this).height();
+                var w = $(this).width();
+                var pw = $(this).parent("a").width();
+                if (300 > h) {
+                    var diff = 300 - h;
+                    $(this).css("margin-top", diff / 2 + "px");
+                } 
+                 if (pw > w) {
+                   
+                    var diff = pw - w;
                     $(this).css("margin-left", diff / 2 + "px");
                 }
 
@@ -317,5 +337,4 @@
         });
     </script>
 </body>
-
 </html>
