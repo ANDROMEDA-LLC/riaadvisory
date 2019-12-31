@@ -192,9 +192,11 @@
                             <h3>Contacts</h3>
 
                             <ul class="footer-contact-list">
-                                <li><span>Address:</span> 2000 Ponce De Leon Blvd., Suite # 600 Coral Gables, FL 33134</li>
-                                <li><span>Email:</span> <a href="mailto:info@riaadvisory.com">info@riaadvisory.com</a></li>
-                                <li><span>Phone:</span> <a href="#">305.421.6303</a></li> 
+                                <li><span>Address:</span> <a target="_blank" href=" https://www.google.com/maps/place/2000+Ponce+de+Leon+Blvd+%23600,+Coral+Gables,+FL+33134,+Amerika+Birle%C5%9Fik+Devletleri/@25.7542806,-80.2612405,17z/data=!3m1!4b1!4m5!3m4!1s0x88d9b79942bc8b13:0xb488cf59f14014bf!8m2!3d25.7542806!4d-80.2590518">
+                                    2000 Ponce De Leon Blvd., Suite # 600 Coral Gables, FL 33134
+                                </a></li>
+                               <li><span>Email:</span> <a href="mailto:info@riaadvisory.com">info@riaadvisory.com</a></li>
+                                <li><span>Phone:</span> <a href="tel:3054216303">305.421.6303</a></li> 
                                 <li><p style="color:#4ac728;">“A ISO 27001” AND “SOC2” CERTIFIED COMPANY</p></li>
                             </ul>
                         </div>
