@@ -190,7 +190,7 @@
           <p>Submit your details our experts will reply you with a quote very soon.</p>
 
           <form action="{{base_url('contactform')}}" method="POST"  name="sentcontact">
-            <input type="hidden" value="home" name="page">
+            <input type="hidden" value="partners" name="page">
             <div class="form-group">
               <input type="text" name="name" id="name" class="form-control" value="{{set_value('name')}}" placeholder="Name" required>
             </div>

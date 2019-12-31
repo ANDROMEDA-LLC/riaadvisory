@@ -81,6 +81,10 @@
             'color': settings.btnFontColor,
             'font-size': settings.btnFontSize,
             'text-decoration': 'none',
+            'width' :'6%',
+            'margin-right': 'auto',
+            'margin-left': 'auto',
+            'margin-top': '5px'
         });
 
         $("#cookie-msg a.btn-aceptar").on("click", function(){
