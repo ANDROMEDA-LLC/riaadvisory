@@ -18,6 +18,9 @@
             <input type="submit" name="login" class="btn btn-primary btn-user btn-block" value="Login">
         </form>
         <hr>
+        <div class="text-center">
+            <a href="{{base_url()}}"><i class="fas fa-arrow-left"></i> Go Home !</a>
+        </div>
     </div>
     <div class="col-lg-2"></div>
 </div>
