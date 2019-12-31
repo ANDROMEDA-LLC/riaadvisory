@@ -52,7 +52,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
-                                    <input type="text" name="company" id="msg_subject" value="{{set_value('company')}}"  class="form-control"  placeholder="Company" required>
+                                    <input type="text" name="company" id="msg_subject" value="{{set_value('company')}}"  class="form-control"  placeholder="Company">
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>

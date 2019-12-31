@@ -356,7 +356,7 @@
               <input type="text" name="phone_number" id="phone_number" class="form-control" value="{{set_value('phone_number')}}" placeholder="Phone Number" required>
             </div>
             <div class="form-group">
-              <input type="text" name="company" id="company" class="form-control" value="{{set_value('company')}}" placeholder="Company" required>
+              <input type="text" name="company" id="company" class="form-control" value="{{set_value('company')}}" placeholder="Company">
             </div>
             <div class="form-group">
               <textarea name="message" id="message" cols="30" rows="4" class="form-control"  placeholder="Message" required>{{set_value('name')}}</textarea>
