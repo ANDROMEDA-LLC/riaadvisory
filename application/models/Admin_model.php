@@ -35,15 +35,15 @@ class Admin_model extends CI_Model {
     function blogGetModel() {
         return $this->db->select('*')
                         ->limit(5)
-                        ->get('blog')
                         ->order_by('create_date', 'desc')
+                        ->get('blog')
                         ->result(); // row() bir tane ve en üste ki veri çeker result() bütün veriyi döner . 
     }
     function newsGetModel() {
         return $this->db->select('*')
                         ->limit(5)
-                        ->get('news')
                         ->order_by('create_date', 'desc')
+                        ->get('news')
                         ->result(); // row() bir tane ve en üste ki veri çeker result() bütün veriyi döner . 
     }
     
