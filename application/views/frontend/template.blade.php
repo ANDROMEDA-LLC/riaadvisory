@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="generator" content="php codeigniter" />
     <meta name="author" content="ANDROMEDA">
+    <meta name="description" content="We Help Businesses Innovate and Grow,Our Experts are Always Ready to Help you">
+    <meta name="keywords" content="USA,ORACLE,JAVA,UNTILITIES,FINANCIAL SERVICES,RIA ADVISORY,RECOGNIZE,INNOVATE,ACCELERATE">
     <link rel="canonical" href="{{base_url('services')}}" />
     <link rel='shortlink' href="{{base_url('services')}}" />
     <link rel="icon" href="{{base_url('assets/frontend')}}/img/ria_favicon.png" sizes="32x32" />
