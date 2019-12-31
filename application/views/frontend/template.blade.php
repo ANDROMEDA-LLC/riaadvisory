@@ -126,9 +126,6 @@
                                     <li class="nav-item"><a href="{{base_url('blog')}}" class="nav-link">Blog</a></li>
                                     <li ><a href="{{base_url('contact')}}" class="btn btn-primary" style="margin-top: 6px;margin-bottom: 6px;">Contact</a></li>
                                 </ul>
-                                <div class="others-options">
-                                    
-                                </div>
                                 
                             </div>
                         </nav>
