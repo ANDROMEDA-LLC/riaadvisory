@@ -493,7 +493,6 @@
     </div>
 
     <div class="row">
-      
       @foreach ($blog as $item)
                     <div class="col-lg-4 col-md-6">
                         <div class="single-blog-post">
