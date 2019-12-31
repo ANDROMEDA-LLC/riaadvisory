@@ -345,20 +345,21 @@
           <p>Submit your details our experts will reply you with a quote very soon.</p>
 
           <form action="{{base_url('contactform')}}" method="POST"  name="sentcontact">
+            <input type="hidden" value="home" name="page">
             <div class="form-group">
-              <input type="text" name="name" id="name" class="form-control" value="{{set_value('name')}}" placeholder="Name">
+              <input type="text" name="name" id="name" class="form-control" value="{{set_value('name')}}" placeholder="Name" required>
             </div>
             <div class="form-group">
-              <input type="email" name="email" id="email" class="form-control" value="{{set_value('email')}}" placeholder="Email">
+              <input type="email" name="email" id="email" class="form-control" value="{{set_value('email')}}" placeholder="Email" required>
             </div>
             <div class="form-group">
-              <input type="text" name="phone_number" id="phone_number" class="form-control" value="{{set_value('phone_number')}}" placeholder="Phone Number">
+              <input type="text" name="phone_number" id="phone_number" class="form-control" value="{{set_value('phone_number')}}" placeholder="Phone Number" required>
             </div>
             <div class="form-group">
-              <input type="text" name="company" id="company" class="form-control" value="{{set_value('company')}}" placeholder="Company">
+              <input type="text" name="company" id="company" class="form-control" value="{{set_value('company')}}" placeholder="Company" required>
             </div>
             <div class="form-group">
-              <textarea name="message" id="message" cols="30" rows="4" class="form-control"  placeholder="Message">{{set_value('name')}}</textarea>
+              <textarea name="message" id="message" cols="30" rows="4" class="form-control"  placeholder="Message" required>{{set_value('name')}}</textarea>
             </div>
             <button type="submit" class="btn btn-primary" value="submit" name="submit" >Send Message</button>
           </form>
@@ -521,6 +522,14 @@
     </div>
   </div>
 </section>
-<!-- End Blog Area -->
-
+@endsection
+@section('js')
+<script type="text/javascript">
+<?php $ci = get_instance();
+    if($ci->session->flashdata('success')){ ?>
+    alertify.alert('SUCCESS',"<?php echo $ci->session->flashdata('success'); ?>");
+<?php }else if($ci->session->flashdata('error')){  ?>
+    alertify.alert('ERROR',"<?php echo $ci->session->flashdata('error'); ?>");
+  <?php } ?>
+</script>
 @endsection

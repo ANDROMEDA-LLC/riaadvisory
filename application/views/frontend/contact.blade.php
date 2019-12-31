@@ -30,34 +30,35 @@
                 </div>
                 <div class="contact-form">
                     <form action="{{base_url('contactform')}}" method="POST"  name="sentcontact" >
+                    <input type="hidden" value="contact" name="page">
                         <div class="row">
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
-                                    <input type="text" name="name" id="name" class="form-control" value="{{set_value('name')}}"   placeholder="Name">
+                                    <input type="text" name="name" id="name" class="form-control" value="{{set_value('name')}}"   placeholder="Name" required>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
-                                    <input type="email" name="email" id="email" class="form-control" value="{{set_value('email')}}"  placeholder="Email">
+                                    <input type="email" name="email" id="email" class="form-control" value="{{set_value('email')}}"  placeholder="Email" required>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
-                                    <input type="text" name="phone_number" id="phone_number" value="{{set_value('phone_number')}}"  class="form-control" placeholder="Phone">
+                                    <input type="text" name="phone_number" id="phone_number" value="{{set_value('phone_number')}}"  class="form-control" placeholder="Phone" required>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
-                                    <input type="text" name="company" id="msg_subject" value="{{set_value('company')}}"  class="form-control"  placeholder="Company">
+                                    <input type="text" name="company" id="msg_subject" value="{{set_value('company')}}"  class="form-control"  placeholder="Company" required>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-md-12">
                                 <div class="form-group">
-                                    <textarea name="message" class="form-control" id="message" cols="30" rows="5"  placeholder="Your Message">{{set_value('message')}}</textarea>
+                                    <textarea name="message" class="form-control" id="message" cols="30" rows="5"  placeholder="Your Message" required>{{set_value('message')}}</textarea>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>

@@ -109,6 +109,7 @@ class Home extends CI_Controller
     public function contactForm()
     {
         if ($this->input->post('submit')) {
+            $this->input->post('page') == 'home' ? $redirect_link = '/' : $redirect_link = $this->input->post('page');
             $this->load->library('form_validation');
             $data = (object) $this->input->post();
             $this->form_validation->set_rules('name', 'name', 'required|min_length[3]');
@@ -128,24 +129,23 @@ class Home extends CI_Controller
                     );
                     $addContact = $this->Home_model->contactEkleModel($contact_data);
                     if ($addContact) {
-                        error_log($addContact);
                         $this->session->set_flashdata('success', 'Your request is received. Thank you.');
-                        redirect('contact');
+                        redirect($redirect_link);
                     } else {
                         $this->session->set_flashdata('error', 'There was a problem, please try again.');
-                        $this->theme->display('frontend/contact');
+                        redirect($redirect_link);
                     }
                 } else {
                     $this->session->set_flashdata('error', 'There was a problem, please try again.');
-                    $this->theme->display('frontend/contact');
+                    redirect($redirect_link);
                 }
             } else {
                 $error_array = $this->form_validation->error_array();
                 $this->session->set_flashdata('error', array_values($error_array)[0]);
-                $this->theme->display('frontend/contact');
+                redirect($redirect_link);
             }
         } else {
-            redirect('contact');
+            redirect($redirect_link);
         }
     }
 
