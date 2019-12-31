@@ -129,7 +129,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="single-footer-widget">
                         <div class="logo">
-                            <a href="#"><img src="{{base_url('assets/frontend')}}/img/white-logo.png" alt="image"></a>
+                            <a  href="{{base_url('/')}}"><img src="{{base_url('assets/frontend')}}/img/white-logo.png" alt="image"></a>
                             <p>We Help Businesses Innovate and Grow</p>
                         </div>
 
