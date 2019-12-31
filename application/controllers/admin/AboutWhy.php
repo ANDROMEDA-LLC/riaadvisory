@@ -44,7 +44,7 @@ class Aboutwhy extends CI_Controller
                 $sonuc['hata'] = array_values($error_array)[0];
             }
         } else {
-            $sonuc['hata'] = 'Bir sorun oluştu tekrar deneyiniz.';
+            $sonuc['hata'] = 'There was a problem, please try again.';
         }
         echo json_encode($sonuc);
     }
@@ -74,7 +74,7 @@ class Aboutwhy extends CI_Controller
                 $sonuc['hata'] = array_values($error_array)[0];
             }
         } else {
-            $sonuc['hata'] = 'Bir sorun oluştu tekrar deneyiniz.';
+            $sonuc['hata'] = 'There was a problem, please try again.';
         }
         echo json_encode($sonuc);
     }

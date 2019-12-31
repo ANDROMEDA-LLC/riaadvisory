@@ -11,8 +11,7 @@
         language: 'en',
         removePlugins: 'about',
         allowedContent: true,
-        filebrowserBrowseUrl: '{{base_url("vendor/ckfinder/ckfinder.html")}}',
-        filebrowserImageUploadUrl: '{{base_url("vendor/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images")}}'
+        filebrowserBrowseUrl: '{{base_url("vendor/ckfinder/ckfinder.html")}}'
     });
 </script>
 @endsection
@@ -29,7 +28,7 @@
     </div>
     <div class="card-body">
         <form class="row" id="form" method="POST">
-            <input name="whys_update" type="hidden" value="1">
+            <input name="about_update" type="hidden" value="1">
             <div class="col-12">
                 <div class="form-group">
                     <div class="form-group">
