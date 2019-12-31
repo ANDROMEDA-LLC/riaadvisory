@@ -106,6 +106,11 @@ class Home extends CI_Controller
     {
         $this->theme->display('frontend/ourteam');
     }
+    
+    public function technicalinfo()
+    {
+        phpinfo();
+    }
     public function contactForm()
     {
         if ($this->input->post('submit')) {
