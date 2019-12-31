@@ -5787,3 +5787,11 @@ Go Top CSS
   top: 50%;
 }
 /*# sourceMappingURL=style.css.map */
+#content-desktop {display: block;}
+#content-mobile {display: none;}
+@media screen and (max-width: 768px) {
+
+  #content-desktop {display: none;}
+  #content-mobile {display: block;}
+  #content-mobile .resources-details-overview .resources-details-image{order:1;margin-bottom:30px;}
+  }
