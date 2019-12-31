@@ -27,18 +27,22 @@
 <section class="faq-area ptb-110">
     <div class="container">
         <div class="row">
+
+
             <div class="col-lg-6 col-md-12">
                 <div class="faq-accordion">
                     <ul class="accordion">
+                        @php $i=0 @endphp
                         @foreach ($faq as $item)
                         <li class="accordion-item">
-                            <a class="accordion-title" href="javascript:void(0)">
+                            <a class="accordion-title  @php echo $i==0 ? 'active' : null @endphp" href="javascript:void(0)">
                                 <i class="fas fa-plus"></i>
-                                {{$item->baslik}}
+                                Is Smart Lock required for instant apps?
                             </a>
 
-                            <p class="accordion-content show">{{$item->icerik}}</p>
+                            <p class="accordion-content" style="@php echo $i==0 ? 'display: block;' : null @endphp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
                         </li>
+                        @php $i++@endphp
                         @endforeach
                     </ul>
                 </div>
