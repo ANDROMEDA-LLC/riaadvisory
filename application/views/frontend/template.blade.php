@@ -245,12 +245,12 @@
                     </div>
                 </div>
             </div>
-
+            <div class="jquery-script-clear"></div>
             <div class="circle-map"><img src="{{base_url('assets/frontend')}}/img/circle-map.png" alt="image"></div>
         </footer>
         <!-- End Footer Area -->
-        
         <div class="go-top"><i class="fas fa-arrow-up"></i><i class="fas fa-arrow-up"></i></div>
+     
         
         <!-- jQuery Min JS -->
         <script src="{{base_url('assets/frontend')}}/js/jquery.min.js"></script>
@@ -279,6 +279,7 @@
         <!-- Main JS -->
         <script src="{{base_url('assets/frontend')}}/js/main.js"></script>
         <script src="{{base_url('assets/frontend')}}/js/alertify.min.js"></script>
+        <script src="{{base_url('assets/frontend')}}/js/jquery.cookieMessage.js"></script>
         @yield('js')
         <script>
         $(document).ready(function(){
@@ -316,6 +317,15 @@ $(document).ready(function(){
 <!--End mc_embed_signup-->
     </body>
 </html>
+
+<script type="text/javascript">
+$.cookieMessage({
+    'mainMessage': 'This website uses cookies. By using this website you consent to our use of these cookies. For more information visit our <a >Privacy Policy</a>. ',
+    'acceptButton': 'Accept',
+    'fontSize': '16px',
+    'backgroundColor': '#222',
+});
+</script>
 <style>
     .single-blog-post .entry-thumbnail a{
         width: 350px !important;
