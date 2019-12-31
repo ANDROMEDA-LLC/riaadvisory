@@ -330,9 +330,9 @@
     </script>
     <script type="text/javascript">
         $.cookieMessage({
-            'mainMessage': 'This website uses cookies. By using this website you consent to our use of these cookies. For more information visit our <a >Privacy Policy</a>. ',
+            'mainMessage': 'By using this website, you agree to our use of cookies. We use cookies to provide you with a great experience and to help our website run effectively. ',
             'acceptButton': 'Accept',
-            'fontSize': '16px',
+            'fontSize': '11px',
             'backgroundColor': '#222',
         });
     </script>

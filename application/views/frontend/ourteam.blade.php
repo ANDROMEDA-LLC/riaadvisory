@@ -6,7 +6,7 @@
         <div class="page-title-area">
             <div class="container">
                 <div class="page-title-content">
-                    <h2>OUR TEAM</h2>
+                    <h2>Our Team</h2>
                     <ul>
                         <li><a href="#">Company</a></li>
 						<li>Our Team</li>

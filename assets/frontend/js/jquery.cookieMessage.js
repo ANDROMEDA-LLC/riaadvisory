@@ -62,7 +62,7 @@
             'bottom': '0',
             'width': '100%',
             'text-align': 'center',
-            'padding': '30px 50px',
+            'padding': '12px 50px',
             'background-color': settings.backgroundColor,
             'color': settings.fontColor,
             'font-size': settings.fontSize,

@@ -6,7 +6,7 @@
         <div class="page-title-area">
             <div class="container">
                 <div class="page-title-content">
-                    <h2>UTILITIES</h2>
+                    <h2>Utilities</h2>
                     <ul>
                         <li><a href="#">Home</a></li>
 						<li>Services</li>
